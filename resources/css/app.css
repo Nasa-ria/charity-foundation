@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+   
+}
+
+.sec_1{
+    width: 100%;
+    /* background-image: url("../images/homeless.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+    /* background-color: red; */
+}
