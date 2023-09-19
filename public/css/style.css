@@ -2843,10 +2843,11 @@ img {
 }
 
 .hero .slide {
-    height: 100vh;
+    height: 400vh;
     position: relative;
     background-repeat: no-repeat;
     position: relative;
+    /* background-size: cover; */
 }
 
 @media (max-width: 767px) {
@@ -2857,6 +2858,7 @@ img {
 
 .hero .slide .slider-bg {
     display: none;
+    /* background-repeat: no-repeat; */
 }
 
 .hero .slide:focus {
@@ -5102,7 +5104,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url(../images/cta.jpg) no-repeat center center / cover;
+    background: url(../images/homeless.jpg) no-repeat center center / cover;
     align-items: center;
     position: relative;
     z-index: 1;
