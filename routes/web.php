@@ -16,3 +16,6 @@ use App\Http\Controllers\IndexController;
 
 
 Route::get('/',[IndexController::class,'index'])->name('home');
+
+Route::get('/login',[IndexController::class,'login'])->name('login');
+Route::get('/register',[IndexController::class,'register'])->name('register');

@@ -73,9 +73,9 @@
                             <p>online store with lots of cool and exclusive tp-features</p>
                             <div class="contact-ft">
                                 <ul>
-                                    <li><i class="fi flaticon-pin"></i>28 Street, New York City, USA</li>
-                                    <li><i class="fi flaticon-call"></i>+000123456789</li>
-                                    <li><i class="fi flaticon-envelope"></i>Sadakat@gmail.com</li>
+                                    <li><i class="bi bi-pin-map"></i> 28 Street, New York City, USA</li>
+                                    <li><i class="bi bi-telephone"></i> +000123456789</li>
+                                    <li><i class="bi bi-envelope"></i> Sadakat@gmail.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -83,15 +83,22 @@
                     <div class="col col-lg-3 col-md-3 col-sm-6">
                         <div class="widget instagram">
                             <div class="widget-title">
-                                <h3>Instagram</h3>
+                                <h3>Socials</h3>
                             </div>
                             <ul class="d-flex">
-                                <li><a href="#"><img src="assets/images/instragram/1.jpg" alt=""></a></li>
+                                <li><i class="bi bi-facebook"></i></li>
+                                <li><i class="bi bi-instagram"></i></li>
+                                <li><i class="bi bi-threads"></i></li>
+                                <li><i class="bi bi-messenger"></i></li>
+                                <li><i class="bi bi-meta"></i></li> 
+                                <li><i class="bi bi-whatsapp"></i></li>
+
+                                {{-- <li><a href="#"><img src="assets/images/instragram/1.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/2.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/3.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/4.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/5.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="assets/images/instragram/6.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="assets/images/instragram/6.jpg" alt=""></a></li> --}}
                             </ul>
                         </div>
                     </div>
@@ -112,18 +119,19 @@
 </div>
 </div>
 <!-- end of page-wrapper -->
+
 <!-- theme-change-btn -->
 <div class="theme-change-btn">
- <button id="change-theme-btn">
-    <span class="cng-btn-1">Light <i class="ti-palette"></i></span>
-    <span class="cng-btn-2">Dark  <i class="ti-palette"></i></span>
-</button>
+ {{-- <button id="change-theme-btn"> --}}
+    {{-- <span class="cng-btn-1">Light <i class="ti-palette"></i></span> --}}
+    {{-- <span class="cng-btn-2">Dark  <i class="ti-palette"></i></span> --}}
+{{-- </button> --}}
 </div>
 
 <div id="magic-cursor">
-<div id="ball">
+{{-- <div id="ball">
     <div id="ball-drag-x"></div>
     <div id="ball-drag-y"></div>
     <div id="ball-loader"></div>
-</div>
+</div> --}}
 </div>
