@@ -4333,14 +4333,17 @@ ul {
 #0.9 tp-case-area
 ===================================================*/
 .section-title2 {
-    margin-bottom: 90px;
+    /* margin-bottom: 90px; */
+    margin-top: 5em;
 }
 
 .section-title2 .thumb-text {
     margin: auto;
+  
 }
 
 .section-title2 h2 {
+
     margin-bottom: 30px;
 }
 
@@ -4534,6 +4537,7 @@ ul {
 .case-area {
     padding-bottom: 70px;
     background: #1e1e1e;
+    
 }
 
 @media(max-width: 991px) {
@@ -5401,8 +5405,9 @@ breadcumb-style
 ------------------------------------------------------------------*/
 
 .tp-breadcumb-area {
-    background: url(../images/breadcumb/img-1.jpg) no-repeat center top / cover;
-    min-height: 350px;
+  
+    background: url(../images/img-1.jpg) no-repeat center top / cover;
+    min-height: 550px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -5423,6 +5428,7 @@ breadcumb-style
 
 .tp-breadcumb-wrap {
     text-align: center;
+    margin-top: 5em;
 }
 
 @media(max-width: 767px) {

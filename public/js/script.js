@@ -1,18 +1,18 @@
 (function($) {
 
-	// "use strict";
+	"use strict";
 
-    // $('.select').niceSelect();
+    $('.select').niceSelect();
 
 
-    // document.getElementById('change-theme-btn').addEventListener('click', function () {
-    //     let darkThemeEnabled = document.body.classList.toggle('light-theme');
-    //     localStorage.setItem('light-theme-enabled', darkThemeEnabled);
-    // });
+    document.getElementById('change-theme-btn').addEventListener('click', function () {
+        let darkThemeEnabled = document.body.classList.toggle('light-theme');
+        localStorage.setItem('light-theme-enabled', darkThemeEnabled);
+    });
 
-    // if (JSON.parse(localStorage.getItem('light-theme-enabled'))) {
-    //     document.body.classList.add('light-theme');
-    // }
+    if (JSON.parse(localStorage.getItem('light-theme-enabled'))) {
+        document.body.classList.add('light-theme');
+    }
 
 
 

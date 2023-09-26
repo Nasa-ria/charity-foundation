@@ -19,3 +19,8 @@ Route::get('/',[IndexController::class,'index'])->name('home');
 
 Route::get('/login',[IndexController::class,'login'])->name('login');
 Route::get('/register',[IndexController::class,'register'])->name('register');
+Route::get('/donate',[IndexController::class,'donate'])->name('donate');
+Route::get('/cause',[IndexController::class,'cause'])->name('cause');
+Route::get('/event',[IndexController::class,'event'])->name('event');
+Route::get('/blog',[IndexController::class,'blog'])->name('blog');
+Route::get('/contact',[IndexController::class,'contact'])->name('contact');

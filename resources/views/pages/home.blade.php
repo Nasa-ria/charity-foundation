@@ -38,95 +38,10 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="slide">
-                    <div class="container">
-                        <img src="{{asset('images/photo.avif')}}" alt class="slider-bg">
-                        <div class="row">
-                            <div class="col col-md-6 slide-caption">
-                                <div class="slide-title">
-                                    <h2>Let’s be Kind for <span>Children</span></h2>
-                                </div>
-                                <div class="slide-subtitle">
-                                    <p>High Quality Charity Theme in Envato Market.</p>
-                                    <p>You Can Satisfied Yourself By Helping.</p>
-                                </div>
-                                <div class="btns">
-                                    <a href="donate.html" class="theme-btn">Donate Now</a>
-                                    <a href="about.html" class="theme-btn-s2">Know More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-                {{-- <div class="slide">
-                    <div class="container">
-                        <img src="{{asset('images/photo.avif')}}" alt class="slider-bg">
-                        <div class="row">
-                            <div class="col col-md-6 slide-caption">
-                                <div class="slide-title">
-                                    <h2>Let’s be Kind for <span>Children</span></h2>
-                                </div>
-                                <div class="slide-subtitle">
-                                    <p>High Quality Charity Theme in Envato Market.</p>
-                                    <p>You Can Satisfied Yourself By Helping.</p>
-                                </div>
-                                <div class="btns">
-                                    <a href="donate.html" class="theme-btn">Donate Now</a>
-                                    <a href="about.html" class="theme-btn-s2">Know More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+                
             </div>
         </section>
-        <!-- end of hero slider -->
-        <!--features start -->
-
-
-        
-        {{-- <div class="features-area ">
-            <div class="container"> --}}
-                {{-- <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="features-item-2">
-                            <div class="features-icon">
-                                <i class="bi bi-activity"></i>
-                                <img class="fi flaticon-salad" src="{{asset('images/salad (1).png')}}">
-                                <i class="fi fi-rr-salad"></i>
-                                <i class="fa fa-cutlery" aria-hidden="true"></i>
-                            </div>
-                            <div class="features-content">
-                                <p>Health For</p>
-                                <h3>Healthy Food</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="features-item-2">
-                            <div class="features-icon">
-                                <i class="fi flaticon-school"></i>
-                            </div>
-                            <div class="features-content">
-                                <p>Get Free</p>
-                                <h3>Pure Education</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="features-item-2">
-                            <div class="features-icon">
-                                <i class="fi flaticon-medicine"></i>
-                            </div>
-                            <div class="features-content">
-                                <p>Get Free</p>
-                                <h3>Medical Facilities</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
-            {{-- </div>
-        </div> --}}
+       
         <!--features-features end -->
         <!-- about-area start-->
         <div class="about-style-2">
@@ -639,6 +554,8 @@
                 </div>
             </div> <!-- end container -->
         </section>
-        @endsection
-        <!-- news-letter-section end-->
+     </div>
+  
+   @endsection
+       
       
