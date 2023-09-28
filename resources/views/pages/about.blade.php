@@ -1,15 +1,15 @@
-
 @extends('layouts.index')
 @section('content')
+
 <div class="tp-breadcumb-area">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="tp-breadcumb-wrap">
-                    <h2>Our Causes</h2>
+                    <h2>About Us</h2>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><span>Causes</span></li>
+                        <li><span>About</span></li>
                     </ul>
                 </div>
             </div>
@@ -17,6 +17,85 @@
     </div>
 </div>
 <!-- .tp-breadcumb-area end -->
+<!-- about-area start-->
+<div class="about-style-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="about-img">
+                   <img src="assets/images/Volunteers.jpg" alt=""> 
+                    <div class="video-btn">
+                        <ul>
+                            <li><a href="https://www.youtube.com/embed/uQBL7pSAXR8?autoplay=1" class="video-btn" data-type="iframe">
+                            <i class="fi flaticon-play-button"></i>
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-12">
+                <div class="about-content">
+                    <div class="section-title">
+                        <h2>About Us</h2>
+                    </div>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at ,sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum</p> 
+                    <p> and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum,Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                    <div class="btns">
+                        <div><a class="theme-btn" href="about.html">More About Us..</a></div>
+                    </div>
+                    <div class="signature">
+                        <img src="assets/images/img-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- about-area end-->
+
+
+<!--features start -->
+<div class="features-area features-area-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="features-item-2">
+                    <div class="features-icon">
+                        <i class="fi flaticon-salad"></i>
+                    </div>
+                    <div class="features-content">
+                        <p>Health For</p>
+                        <h3>Healthy Food</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="features-item-2">
+                    <div class="features-icon">
+                        <i class="fi flaticon-school"></i>
+                    </div>
+                    <div class="features-content">
+                        <p>Get Free</p>
+                        <h3>Pure Education</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="features-item-2">
+                    <div class="features-icon">
+                        <i class="fi flaticon-medicine"></i>
+                    </div>
+                    <div class="features-content">
+                        <p>Get Free</p>
+                        <h3>Medical Facilities</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--features-features end -->
 <!-- case-area-start -->
 <div class="case-area section-padding">
     <div class="container">
@@ -44,7 +123,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('singleCause')}}">Financial Help for Poor Families</a></h3>
+                        <h3><a href="causes.html">Financial Help for Poor Families</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -64,7 +143,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('singleCause')}}">Education for Poor Children</a></h3>
+                        <h3><a href="causes.html">Education for Poor Children</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -84,7 +163,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('singleCause')}}">Send Child to School for a Year</a></h3>
+                        <h3><a href="causes.html">Send Child to School for a Year</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -104,7 +183,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('singleCause')}}">Food And Home for Children</a></h3>
+                        <h3><a href="causes.html">Food And Home for Children</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -124,7 +203,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('singleCause')}}">Pure Water For The World</a></h3>
+                        <h3><a href="causes.html">Pure Water For The World</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -144,7 +223,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('singleCause')}}">Recycling For Charity</a></h3>
+                        <h3><a href="causes.html">Recycling For Charity</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -152,9 +231,9 @@
         </div>
     </div>
 </div>
-<!-- case-area-end --> 
+<!-- case-area-end -->
 <!-- .tp-counter-area start -->
-<div class="tp-counter-area v2">
+<div class="tp-counter-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -189,11 +268,77 @@
     </div>
 </div>
 <!-- .tp-counter-area end -->
+<!-- start team-section -->
+<section class="team-section v2 section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-6 col-lg-offset-3">
+                <div class="section-title text-center">
+                    <span>Meet Our Team</span>
+                    <h2>Our Expert Volunteer</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="team-grids clearfix">
+                    <div class="grid">
+                        <div class="img-holder">
+                            <img src="assets/images/team/team-1.jpg" alt>
+                        </div>
+                        <div class="details">
+                            <h3><a href="volunteer.html">Devin Robertson</a></h3>
+                            <p>CEO & Founder</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="img-holder">
+                            <img src="assets/images/team/team-2.jpg" alt>
+                        </div>
+                        <div class="details">
+                            <h3><a href="volunteer.html">Rickey Goodman</a></h3>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="img-holder">
+                            <img src="assets/images/team/team-3.jpg" alt>
+                        </div>
+                        <div class="details">
+                            <h3><a href="volunteer.html">Jean Washington</a></h3>
+                            <p>Volunteer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
+<!-- end team-section -->
 <!-- news-letter-section start-->
+<section class="news-letter-section">
+    <div class="container">
+        <div class="news-letter-wrap">
+            <div class="row">
+                <div class="col col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2">
+                    <div class="newsletter">
+                        <h3>Subscribe our Newsletter</h3>
+                        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                        <div class="newsletter-form">
+                            <form>
+                                <div>
+                                    <input type="text" placeholder="Enter Your Email" class="form-control">
+                                    <button class="bigCursor" type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end container -->
+</section>
 
-<!-- news-letter-section end-->
 
-    <!-- end tp-site-footer -->
-</div>
-</div>
+
 @endsection

@@ -30,4 +30,19 @@ class IndexController extends Controller
     public function contact(){
         return view('pages.contact');
     }
+    public function singleEvent(){
+        return view('pages.singleEvent');
+    }
+    public function singleBlog(){
+        return view('pages.singleBlog');
+    }
+    public function singleCause(){
+        return view('pages.singleCause');
+    }
+    public function about(){
+        return view('pages.about');
+    }
+    public function volunteer(){
+        return view('pages.volunteer');
+    }
 }
