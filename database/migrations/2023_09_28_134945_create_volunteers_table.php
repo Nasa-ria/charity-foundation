@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('fullName');
             $table->string('email');
-            $table->subject('title');
-            $table->gender('gender');
-            $table->resume('title');
+            $table->string('subject');
+            $table->string('gender');
+            $table->string('resume');
             $table->string('case_description');
             $table->timestamps();
         });

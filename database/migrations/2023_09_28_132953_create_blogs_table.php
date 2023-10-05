@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->integer('likes');
-            $table->string('tags');
+            $table->integer('likes')->nullable();
+            $table->json('tags');
             $table->timestamps();
         });
     }

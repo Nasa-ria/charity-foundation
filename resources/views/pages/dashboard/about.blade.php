@@ -23,11 +23,11 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 col-12">
                 <div class="about-img">
-                   <img src="assets/images/Volunteers.jpg" alt=""> 
+                   <img src="{{asset('images/vo.jpg')}}" alt=""> 
                     <div class="video-btn">
                         <ul>
                             <li><a href="https://www.youtube.com/embed/uQBL7pSAXR8?autoplay=1" class="video-btn" data-type="iframe">
-                            <i class="fi flaticon-play-button"></i>
+                                <i class="bi bi-google-play" style="font-size: 50px;color: rgb(114, 70, 4);"></i>
                             </a>
                             </li>
                         </ul>
@@ -42,10 +42,10 @@
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at ,sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum</p> 
                     <p> and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum,Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
                     <div class="btns">
-                        <div><a class="theme-btn" href="about.html">More About Us..</a></div>
+                        {{-- <div><a class="theme-btn" href="about.html">More About Us..</a></div> --}}
                     </div>
                     <div class="signature">
-                        <img src="assets/images/img-1.png" alt="">
+                        <img src="{{asset('images/img-1.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -112,9 +112,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-1.png" alt="">
+                            <img src="{{asset('images/pex.jpeg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="causes.html">Financial Help for Poor Families</a></h3>
+                        <h3><a href="{{route('cause')}}">Financial Help for Poor Families</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -132,9 +132,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-2.jpg" alt="">
+                            <img src="{{asset('images/pex.jpeg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="causes.html">Education for Poor Children</a></h3>
+                        <h3><a href="{{route('cause')}}">Education for Poor Children</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -152,9 +152,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-3.jpg" alt="">
+                            <img src="{{asset('images/pex.jpeg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="causes.html">Send Child to School for a Year</a></h3>
+                        <h3><a href="{{route('cause')}}">Send Child to School for a Year</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -172,9 +172,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-4.jpg" alt="">
+                            <img src="{{asset('images/pex.jpeg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="causes.html">Food And Home for Children</a></h3>
+                        <h3><a href="{{route('cause')}}">Food And Home for Children</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -192,9 +192,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-5.jpg" alt="">
+                            <img src="{{asset('images/pex.jpeg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="causes.html">Pure Water For The World</a></h3>
+                        <h3><a href="{{route('cause')}}">Pure Water For The World</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -212,9 +212,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-6.jpg" alt="">
+                            <img src="{{asset('images/pex.jpeg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="causes.html">Recycling For Charity</a></h3>
+                        <h3><a href="{{route('cause')}}">Recycling For Charity</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -287,7 +287,7 @@
                             <img src="assets/images/team/team-1.jpg" alt>
                         </div>
                         <div class="details">
-                            <h3><a href="volunteer.html">Devin Robertson</a></h3>
+                            <h3><a href="{{route('volunteer')}}">Devin Robertson</a></h3>
                             <p>CEO & Founder</p>
                         </div>
                     </div>
@@ -296,7 +296,7 @@
                             <img src="assets/images/team/team-2.jpg" alt>
                         </div>
                         <div class="details">
-                            <h3><a href="volunteer.html">Rickey Goodman</a></h3>
+                            <h3><a href="{{route('volunteer')}}">Rickey Goodman</a></h3>
                             <p>Volunteer</p>
                         </div>
                     </div>
@@ -305,7 +305,7 @@
                             <img src="assets/images/team/team-3.jpg" alt>
                         </div>
                         <div class="details">
-                            <h3><a href="volunteer.html">Jean Washington</a></h3>
+                            <h3><a href="{{route('volunteer')}}">Jean Washington</a></h3>
                             <p>Volunteer</p>
                         </div>
                     </div>

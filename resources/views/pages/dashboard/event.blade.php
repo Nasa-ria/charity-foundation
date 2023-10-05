@@ -30,38 +30,38 @@
                 <div class="event-grids clearfix">
                     <div class="grid">
                         <div class="img-holder">
-                            <img src="assets/images/event/img-1.jpg" alt>
+                            <img src="{{asset('images/pth.avif')}}" alt>
                         </div>
                         <div class="details">
                             <ul class="entry-meta">
                                 <li><a href="#"><i class="ti-calendar"></i> 20 sep 2018</a></li>
                                 <li><a href="#"><i class="ti-folder"></i> Education</a></li>
                             </ul>
-                            <h3><a href="event-single.html">Education for All Children</a></h3>
+                            <h3><a href="{{route('singleEvent')}}">Education for All Children</a></h3>
                         </div>
                     </div>
                     <div class="grid">
                         <div class="img-holder">
-                            <img src="assets/images/event/img-2.jpg" alt>
+                            <img src="{{asset('images/pth.avif')}}" alt>
                         </div>
                         <div class="details">
                             <ul class="entry-meta">
                                 <li><a href="#"><i class="ti-calendar"></i> 20 sep 2018</a></li>
                                 <li><a href="#"><i class="ti-folder"></i> Food</a></li>
                             </ul>
-                            <h3><a href="event-single.html">Food for All Everyone</a></h3>
+                            <h3><a href="{{route('singleEvent')}}">Food for All Everyone</a></h3>
                         </div>
                     </div>
                     <div class="grid">
                         <div class="img-holder">
-                            <img src="assets/images/event/img-3.jpg" alt>
+                            <img src="{{asset('images/pth.avif')}}" alt>
                         </div>
                         <div class="details">
                             <ul class="entry-meta">
                                 <li><a href="#"><i class="ti-calendar"></i> 20 sep 2018</a></li>
                                 <li><a href="#"><i class="ti-folder"></i> Treatment</a></li>
                             </ul>
-                            <h3><a href="event-single.html">Free Treatment</a></h3>
+                            <h3><a href="{{route('singleEvent')}}">Free Treatment</a></h3>
                         </div>
                     </div>
                 </div>

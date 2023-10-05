@@ -4037,7 +4037,7 @@ ul {
 .about-style-3 {
     padding: 100px 0;
     border-bottom: 1px solid rgba(14, 2, 83, 0.2);
-    /* background-color: #000000bd; */
+    background-color: #000000bd;
 }
 
 .about-style .about-content p,
@@ -4061,7 +4061,7 @@ ul {
 
 .about-img img {
     padding: 15px;
-    /* border: 1px solid #ffc7b1; */
+    border: 1px solid #ffc7b1;
 }
 
 .about-style .about-content h2,

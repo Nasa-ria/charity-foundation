@@ -49,12 +49,12 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-12">
                         <div class="about-img">
-                            <img src="{{asset('images/photo.avif')}}" alt="">
+                            <img src="{{asset('images/vo.jpg')}}" alt="">
                             <div class="video-btn">
                                 <ul>
                                     <li><a href="https://www.youtube.com/embed/uQBL7pSAXR8?autoplay=1" class="video-btn" data-type="iframe">
 
-                                            <i class="bi bi-play-circle" style="font-size: 30px;color: rgb(12, 4, 114);"></i>
+                                            <i class="bi bi-google-play" style="font-size: 50px;color: rgb(114, 70, 4);"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -72,7 +72,7 @@
                                 <div><a class="theme-btn" href="{{route('about')}}">More About Us..</a></div>
                             </div>
                             <div class="signature">
-                                <img src="{{asset('images/img-1.jpg')}}" alt="">
+                                <img src="{{asset('images/img-1.png')}}" alt="">
                             </div>
                         </div>
                     </div>

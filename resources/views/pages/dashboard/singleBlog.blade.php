@@ -26,10 +26,10 @@
                 <div class="tp-tp-blog-content clearfix">
                     <div class="post">
                         <div class="entry-media">
-                            <img src="assets/images/blog/img-10.jpg" alt>
+                            <img src="{{asset('images/pth.avif')}}" alt>
                         </div>
                         <ul class="entry-meta">
-                            <li><a href="#"><img src="assets/images/blog/admin.jpg" alt> By Admin</a></li>
+                            <li><a href="#"><img src="{{asset('images/pth.avif')}}" alt> By Admin</a></li>
                             <li><a href="#"><i class="ti-calendar"></i> Sep 25,2021</a></li>
                             <li><a href="#"><i class="ti-heart"></i> 35</a></li>
                         </ul>
@@ -58,7 +58,7 @@
                     </div> <!-- end tag-share -->
                     <div class="author-box">
                         <div class="author-avatar">
-                            <a href="#" target="_blank"><img src="assets/images/blog-details/author.jpg" alt></a>
+                            <a href="#" target="_blank"><img src="{{asset('images/pth.avif')}}" alt></a>
                         </div>
                         <div class="author-content">
                             <a href="#" class="author-name">Henry Joyes</a>
@@ -89,7 +89,7 @@
                                 <li class="comment even thread-even depth-1" id="comment-1">
                                     <div id="div-comment-1">
                                         <div class="comment-theme">
-                                            <div class="comment-image"><img src="assets/images/blog-details/comments-author/img-1.jpg" alt></div>
+                                            <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
                                         </div>
                                         <div class="comment-main-area">
                                             <div class="comment-wrapper">
@@ -109,7 +109,7 @@
                                         <li class="comment">
                                             <div>
                                                 <div class="comment-theme">
-                                                    <div class="comment-image"><img src="assets/images/blog-details/comments-author/img-2.jpg" alt></div>
+                                                    <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
                                                 </div>
                                                 <div class="comment-main-area">
                                                     <div class="comment-wrapper">
@@ -129,7 +129,7 @@
                                                 <li class="comment">
                                                     <div>
                                                         <div class="comment-theme">
-                                                            <div class="comment-image"><img src="assets/images/blog-details/comments-author/img-3.jpg" alt></div>
+                                                            <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
                                                         </div>
                                                         <div class="comment-main-area">
                                                             <div class="comment-wrapper">
@@ -197,7 +197,7 @@
                         <div class="posts">
                             <div class="post">
                                 <div class="img-holder">
-                                    <img src="assets/images/recent-posts/img-1.jpg" alt>
+                                    <img src="{{asset('images/pth.avif')}}" alt>
                                 </div>
                                 <div class="details">
                                     <h4><a href="#">Many Children are suffering a lot for food.</a></h4>
@@ -206,7 +206,7 @@
                             </div>
                             <div class="post">
                                 <div class="img-holder">
-                                    <img src="assets/images/recent-posts/img-2.jpg" alt>
+                                    <img src="{{asset('images/pth.avif')}}" alt>
                                 </div>
                                 <div class="details">
                                     <h4><a href="#">Be kind for the poor people and the kids.</a></h4>
@@ -215,7 +215,7 @@
                             </div>
                             <div class="post">
                                 <div class="img-holder">
-                                    <img src="assets/images/recent-posts/img-3.jpg" alt>
+                                    <img src="{{asset('images/pth.avif')}}" alt>
                                 </div>
                                 <div class="details">
                                     <h4><a href="#">Be soft and kind for the poor people.</a></h4>

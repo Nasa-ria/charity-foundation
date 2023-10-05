@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('location');
             $table->date('date');
             $table->longText('event_details');
-            $table->string('draft');
+            $table->string('status');
             $table->timestamps();
         });
     }
