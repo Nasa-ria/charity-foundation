@@ -33,6 +33,7 @@
                                 <div class="btns">
                                     <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                                     <a href="{{route('about')}}" class="theme-btn-s2">Know More</a>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -276,7 +277,7 @@
                                     <div class="icon">
                                         <div class="parallax-wrap">
                                             <div class="parallax-element">
-                                                <i class="ti-plus"></i>
+                                                <i class="bi bi-plus-lg"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -288,7 +289,7 @@
                                     <div class="icon">
                                         <div class="parallax-wrap">
                                             <div class="parallax-element">
-                                                <i class="ti-plus"></i>
+                                                <i class="bi bi-plus-lg"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -296,11 +297,11 @@
                             </div>
                             <div class="grid Charity Sponsorship">
                                 <a href="{{asset('images/pex.jpeg')}}" class="fancybox" data-fancybox-group="gall-1">
-                                    <img src="{{asset('images/pexels-ph.webp')}}" alt class="img img-responsive">
+                                    <img src="{{asset('images/pex.jpeg')}}" alt class="img img-responsive">
                                     <div class="icon">
                                         <div class="parallax-wrap">
                                             <div class="parallax-element">
-                                                <i class="ti-plus"></i>
+                                                <i class="bi bi-plus-lg"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -312,7 +313,7 @@
                                     <div class="icon">
                                         <div class="parallax-wrap">
                                             <div class="parallax-element">
-                                                <i class="ti-plus"></i>
+                                                <i class="bi bi-plus-lg"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -324,7 +325,7 @@
                                     <div class="icon">
                                         <div class="parallax-wrap">
                                             <div class="parallax-element">
-                                                <i class="ti-plus"></i>
+                                                <i class="bi bi-plus-lg"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -336,7 +337,7 @@
                                     <div class="icon">
                                         <div class="parallax-wrap">
                                             <div class="parallax-element">
-                                                <i class="ti-plus"></i>
+                                                <i class="bi bi-plus-lg"></i>
                                             </div>
                                         </div>
                                     </div>

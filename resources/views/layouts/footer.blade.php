@@ -7,8 +7,8 @@
                     <div class="col col-lg-3 col-md-3 col-sm-6">
                         <div class="widget about-widget">
                             <div class="logo widget-title">
-                                <img class="ft-logo-1" src="assets/images/logo.png" alt="blog">
-                                <img class="ft-logo-2" src="assets/images/logo-2.png" alt="blog">
+                                <img class="ft-logo-1" src="{{asset('images/logo.png')}}"alt="blog">
+                                {{-- <img class="ft-logo-2" src="assets/images/logo-2.png" alt="blog"> --}}
                             </div>
                             <p>Build and Earn with your online store with lots of cool and exclusive tp-features </p>
                             <ul>
@@ -16,7 +16,7 @@
                                     <div class="parallax-wrap">
                                         <div class="parallax-element">
                                             <a href="#">
-                                                <i class="ti-facebook"></i>
+                                                <i class="bi bi-facebook"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -25,7 +25,7 @@
                                     <div class="parallax-wrap">
                                         <div class="parallax-element">
                                             <a href="#">
-                                                <i class="ti-twitter-alt"></i>
+                                                <i class="bi bi-twitter"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@
                                     <div class="parallax-wrap">
                                         <div class="parallax-element">
                                             <a href="#">
-                                                <i class="ti-instagram"></i>
+                                                <i class="bi bi-instagram"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@
                                     <div class="parallax-wrap">
                                         <div class="parallax-element">
                                             <a href="#">
-                                                <i class="ti-google"></i>
+                                                <i class="bi bi-linkedin"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -57,11 +57,11 @@
                                 <h3>Useful Links</h3>
                             </div>
                             <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="causes.html">Our Causes</a></li>
-                                <li><a href="donate.html">Donate</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="event.html">Our Event</a></li>
+                                <li><a href="{{route('about')}}">About Us</a></li>
+                                <li><a href="{{route('cause')}}">Our Causes</a></li>
+                                <li><a href="{{route('donate')}}">Donate</a></li>
+                                <li><a href="{{route('contact')}}">Contact Us</a></li>
+                                <li><a href="{{route('event')}}">Our Event</a></li>
                             </ul>
                         </div>
                     </div>
@@ -86,19 +86,12 @@
                                 <h3>Socials</h3>
                             </div>
                             <ul class="d-flex">
-                                <li><i class="bi bi-facebook"></i></li>
-                                <li><i class="bi bi-instagram"></i></li>
-                                <li><i class="bi bi-threads"></i></li>
-                                <li><i class="bi bi-messenger"></i></li>
-                                <li><i class="bi bi-meta"></i></li> 
-                                <li><i class="bi bi-whatsapp"></i></li>
-
-                                {{-- <li><a href="#"><img src="assets/images/instragram/1.jpg" alt=""></a></li>
+                               <li><a href="#"><img src="assets/images/instragram/1.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/2.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/3.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/4.jpg" alt=""></a></li>
                                 <li><a href="#"><img src="assets/images/instragram/5.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="assets/images/instragram/6.jpg" alt=""></a></li> --}}
+                                <li><a href="#"><img src="assets/images/instragram/6.jpg" alt=""></a></li>
                             </ul>
                         </div>
                     </div>

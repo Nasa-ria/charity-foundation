@@ -44,17 +44,23 @@ class User extends Authenticatable
         $validated = $request->validate([
             'name' => 'required|string',
             'email' => 'required',
+            'profile' =>'required',
             'password' => 'required',
 
         ]);
        
-
+        $profileImagePath = null;
+        if ($request->hasFile('profile')) {
+            $profileImagePath = $request->file('profile')->store('profile');
+        }
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
-            'password' => Hash::make($validated['password'])
+            'password' => Hash::make($validated['password']),
+            'profile' => $profileImagePath,
         ]);
-      
+       
+    
         return response()->json([
             'data' => $user->refresh()
         ]);

@@ -8,7 +8,7 @@
                 <div class="tp-breadcumb-wrap">
                     <h2>Our Causes</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{route('home')}}">Home</a></li>
                         <li><span>Causes</span></li>
                     </ul>
                 </div>
@@ -33,9 +33,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-1.png" alt="">
+                            <img src="{{asset('images/cas1.png')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -53,9 +53,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-2.jpg" alt="">
+                            <img src="{{asset('images/cas2.jpg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -73,9 +73,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-3.jpg" alt="">
+                            <img src="{{asset('images/cas3 (1).jpg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -93,9 +93,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-4.jpg" alt="">
+                            <img src="{{asset('images/cas4.jpg')}}"alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}"class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -113,9 +113,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-5.jpg" alt="">
+                            <img src="{{asset('images/cas5.jpg')}}" alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -133,9 +133,9 @@
                 <div class="cause-item">
                     <div class="cause-top">
                         <div class="cause-img">
-                            <img src="assets/images/cause/img-6.jpg" alt="">
+                            <img src="{{asset('images/cas6.jpg')}}"alt="">
                             <div class="case-btn">
-                                <a href="donate.html" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>

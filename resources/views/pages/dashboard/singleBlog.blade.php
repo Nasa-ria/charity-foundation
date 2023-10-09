@@ -29,9 +29,9 @@
                             <img src="{{asset('images/pth.avif')}}" alt>
                         </div>
                         <ul class="entry-meta">
-                            <li><a href="#"><img src="{{asset('images/pth.avif')}}" alt> By Admin</a></li>
-                            <li><a href="#"><i class="ti-calendar"></i> Sep 25,2021</a></li>
-                            <li><a href="#"><i class="ti-heart"></i> 35</a></li>
+                            <li><a href="#"><img src="{{asset('images/admin.jpg')}}"alt> By Admin</a></li>
+                            <li><a href="#"><i class="bi bi-calendar3"> Sep 25,2021</i></a></li>
+                            <li><a href="#"><i class="bi bi-suit-heart" style="color:red;"> 53</i></a></li>
                         </ul>
                         <h2>Help the helpless who need you.</h2>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now.</p>
@@ -50,15 +50,15 @@
                         </div>
                         <div class="share">
                             <ul>
-                                <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
-                                <li><a href="#"><i class="ti-instagram"></i></a></li>
+                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div> <!-- end tag-share -->
                     <div class="author-box">
                         <div class="author-avatar">
-                            <a href="#" target="_blank"><img src="{{asset('images/pth.avif')}}" alt></a>
+                            <a href="#" target="_blank"><img src="{{asset('images/admin.jpg')}}"  alt></a>
                         </div>
                         <div class="author-content">
                             <a href="#" class="author-name">Henry Joyes</a>
@@ -89,7 +89,7 @@
                                 <li class="comment even thread-even depth-1" id="comment-1">
                                     <div id="div-comment-1">
                                         <div class="comment-theme">
-                                            <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
+                                            <div class="comment-image"><img src="{{asset('images/img-3.jpg')}}" alt></div>
                                         </div>
                                         <div class="comment-main-area">
                                             <div class="comment-wrapper">
@@ -99,7 +99,7 @@
                                                 <div class="comment-area">
                                                     <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, </p>
                                                     <div class="comments-reply">
-                                                        <a class="comment-reply-link" href="#"><i class="fa fa-reply" aria-hidden="true"></i><span>Reply</span></a>
+                                                        <a class="comment-reply-link" href="#"><i class="bi bi-reply" aria-hidden="true"></i><span>Reply</span></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,7 +109,7 @@
                                         <li class="comment">
                                             <div>
                                                 <div class="comment-theme">
-                                                    <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
+                                                    <div class="comment-image"><img src="{{asset('images/img-3.jpg')}}"  alt></div>
                                                 </div>
                                                 <div class="comment-main-area">
                                                     <div class="comment-wrapper">
@@ -119,7 +119,7 @@
                                                         <div class="comment-area">
                                                             <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, </p>
                                                             <div class="comments-reply">
-                                                                <a class="comment-reply-link" href="#"><span><i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                                                                <a class="comment-reply-link" href="#"><span><i class="bi bi-reply" aria-hidden="true"></i> Reply</span></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -129,7 +129,7 @@
                                                 <li class="comment">
                                                     <div>
                                                         <div class="comment-theme">
-                                                            <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
+                                                            <div class="comment-image"><img src="{{asset('images/img-3.jpg')}}"  alt></div>
                                                         </div>
                                                         <div class="comment-main-area">
                                                             <div class="comment-wrapper">
@@ -139,7 +139,7 @@
                                                                 <div class="comment-area">
                                                                     <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, </p>
                                                                     <div class="comments-reply">
-                                                                        <a class="comment-reply-link" href="#"><span><i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                                                                        <a class="comment-reply-link" href="#"><span><i class="bi bi-reply" aria-hidden="true"></i> Reply</span></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -158,8 +158,7 @@
                         <form method="post" id="commentform" class="comment-form">
                             <div class="form-inputs">
                                 <input placeholder="Name" type="text">
-                                <input placeholder="Email" type="email">
-                                <input placeholder="Website" type="url">
+                          
                             </div>
                             <div class="form-textarea">
                                 <textarea id="comment" placeholder="Write Your Comments..."></textarea>

@@ -2,35 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Models\Event;
 use App\Models\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
-class BlogController extends Controller
+class EventController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $publishedBlogs = Blog::where('status', 'publish')->get();
-         return view('pages.dashboard.blog', ['blogs' => $publishedBlogs]);
+        $publishedEvent = Event::where('status', 'publish')->get();
+         return view('pages.dashboard.event', ['publish' => $publishedEvent]);
     }
     
 
-    public function draft(){
-        $draftblogs = Blog::where('status', 'draft')->get();  
-        return view('pages.dashboard.blog', ['draft' => $draftblogs]);
+            public function draft(){
+        $draftEvent = Event::where('status', 'draft')->get();  
+        return view('pages.dashboard.event', ['draft' => $draftEvent]);
     }
     /**
      * Show the form for creating a new resource.
      */
     public function create(Request $request)
     {
-       return view('pages.form.blog');
+       return view('pages.form.cause');
     }
 
     /**
@@ -40,18 +36,17 @@ class BlogController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string',
-            'content' => 'required',
+            'loaction' => 'required',
             'image' => 'required', 
+            'date' => 'required', 
+            'description' => 'required', 
             'status' => 'required', 
-            'tags' => 'nullable|array'
-            
-       
-
         ]);
-        $blog = Blog::create([
+        $event = Event::create([
             'title' => $validated['title'],
-            'content' => $validated['content'],
-            'tags' =>$validated['tags'],
+            'description' => $validated['description'],
+            'date' => $validated['date'],
+            'location' => $validated['location'],
             'status' =>$validated['status'],
         ]);
         if ($request->hasFile('image')) {
@@ -63,11 +58,11 @@ class BlogController extends Controller
             ]);
     
             // Associate the image with the blog post using polymorphic relationship
-            $blog->images()->save($image);
+            $event->images()->save($image);
         }
            
         return response()->json([
-            'data' => $blog ,$image
+            'data' => $event,$image
         ]);
     }
 
@@ -76,7 +71,10 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $event = Event::find($id);
+
+        // Load the view to display the single blog post
+        return view('pages.dashboard.singleBlog', ['event' => $event]);
     }
 
     /**
@@ -84,8 +82,8 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        $blog = Blog::find($id);
-        return view('pages.form.blog')->with('blog',$blog);
+        $event = Event::find($id);
+        return view('pages.form.blog')->with('event',$event);
     }
 
     /**
@@ -93,27 +91,29 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
-            'title' => 'required',
-            'content' => 'required',
-            'tags' => 'nullable|array',
-            'image' => 'required',
+        $validated = $request->validate([
+            'title' => 'required|string',
+            'loaction' => 'required',
+            'image' => 'required', 
+            'date' => 'required', 
+            'description' => 'required', 
             'status' => 'required', 
         ]);
             // Find the blog post you want to update
-            $blog = Blog::findOrFail($id);
+            $event= Event::findOrFail($id);
         
             // Update the blog post details
-            $blog->title = $request->input('title');
-            $blog->content = $request->input('content');
-            $blog->tags = $request->input('tags');
-            $blog->status = $request->input('status');
+            $event->title = $request->input('title');
+            $event->description = $request->input('description');
+            $event->location = $request->input('location');
+            $event->date = $request->input('date');
+            $event->status = $request->input('status');
         
             // Handle image update
             if ($request->hasFile('image')) {
                 // Delete the old image if necessary
-                if ($blog->images->count() > 0) {
-                    $oldImage = $blog->images->first();
+                if ($event->images->count() > 0) {
+                    $oldImage = $event->images->first();
                     Storage::delete($oldImage->url);
                     $oldImage->delete();
                 }
@@ -125,14 +125,14 @@ class BlogController extends Controller
                     'url' => $imagePath,
                 ]);
         
-                $blog->images()->save($image);
+                $event->images()->save($image);
             }
         
-            $blog->save();
+            $event->save();
         
         
             return response()->json([
-                'data' => $blog ,$image
+                'data' => $event ,$image
             ]);
         
         }

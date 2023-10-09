@@ -76,7 +76,7 @@
                                         <li class="comment even thread-even depth-1" id="comment-1">
                                             <div id="div-comment-1">
                                                 <div class="comment-theme">
-                                                    <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
+                                                    <div class="comment-image"><img src="{{asset('images/img-3.jpg')}}"  alt></div>
                                                 </div>
                                                 <div class="comment-main-area">
                                                     <div class="comment-wrapper">
@@ -86,7 +86,7 @@
                                                         <div class="comment-area">
                                                             <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, </p>
                                                             <div class="comments-reply">
-                                                                <a class="comment-reply-link" href="#"><i class="fa fa-reply" aria-hidden="true"></i><span>Reply</span></a>
+                                                                <a class="comment-reply-link" href="#"><i class="bi bi-reply" aria-hidden="true"></i><span>Reply</span></a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -96,7 +96,7 @@
                                                 <li class="comment">
                                                     <div>
                                                         <div class="comment-theme">
-                                                            <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
+                                                            <div class="comment-image"><img src="{{asset('images/img-3.jpg')}}"  alt></div>
                                                         </div>
                                                         <div class="comment-main-area">
                                                             <div class="comment-wrapper">
@@ -106,7 +106,7 @@
                                                                 <div class="comment-area">
                                                                     <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, </p>
                                                                     <div class="comments-reply">
-                                                                        <a class="comment-reply-link" href="#"><span><i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                                                                        <a class="comment-reply-link" href="#"><span><i class="bi bi-reply" aria-hidden="true"></i> Reply</span></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -116,7 +116,7 @@
                                                         <li class="comment">
                                                             <div>
                                                                 <div class="comment-theme">
-                                                                    <div class="comment-image"><img src="{{asset('images/pth.avif')}}" alt></div>
+                                                                    <div class="comment-image"><img src="{{asset('images/img-3.jpg')}}"  alt></div>
                                                                 </div>
                                                                 <div class="comment-main-area">
                                                                     <div class="comment-wrapper">
@@ -126,7 +126,7 @@
                                                                         <div class="comment-area">
                                                                             <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, </p>
                                                                             <div class="comments-reply">
-                                                                                <a class="comment-reply-link" href="#"><span><i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                                                                                <a class="comment-reply-link" href="#"><span><i class="bi bi-reply" aria-hidden="true"></i> Reply</span></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -145,8 +145,6 @@
                                 <form method="post" id="commentform" class="comment-form">
                                     <div class="form-inputs">
                                         <input placeholder="Name" type="text">
-                                        <input placeholder="Email" type="email">
-                                        <input placeholder="Website" type="url">
                                     </div>
                                     <div class="form-textarea">
                                         <textarea id="comment" placeholder="Write Your Comments..."></textarea>
@@ -225,7 +223,7 @@
 
 {{-- </section> --}}
 <!-- news-letter-section end-->
-<
+
     <!-- end tp-site-footer -->
 </div>
 </div>

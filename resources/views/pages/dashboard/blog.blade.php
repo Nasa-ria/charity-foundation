@@ -27,7 +27,7 @@
                             <img src="{{asset('images/pth.avif')}}" alt>
                         </div>
                         <ul class="entry-meta">
-                            <li><a href="#"><img src="{{asset('images/pth.avxif')}}" alt> By Admin</a></li>
+                            <li><a href="#"><img src="{{asset('images/admin.jpg')}}" alt> By Admin</a></li>
                             <li><a href="#"><i class="bi bi-calendar3"></i> Sep 25,2021</a></li>
                             <li><a href="#"><i class="bi bi-suit-heart" style="color:red;"></i> 35</a></li>
                         </ul>
@@ -37,13 +37,13 @@
                     </div>
                     <div class="post format-video">
                         <div class="entry-media video-holder">
-                            <img src="assets/images/blog/img-6.jpg" alt>
+                            <img src="{{asset('images/pth.avif')}}"alt>
                             <a href="https://www.youtube.com/embed/iSbzh0r9IV4?autoplay=1" class="video-btn" data-type="iframe">
                                 <i class="fi flaticon-play-button-2"></i>
                             </a>
                         </div>
                         <ul class="entry-meta">
-                            <li><a href="#"><img src="{{asset('images/pth.avxif')}}" alt> By Admin</a></li>
+                            <li><a href="#"><img src="{{asset('images/admin.jpg')}}" alt> By Admin</a></li>
                             <li><a href="#"><i class="bi bi-calendar3"></i> Sep 25,2021</a></li>
                             <li><a href="#"><i class="bi bi-suit-heart" style="color:red;"></i> 35</a></li>
                         </ul>
@@ -57,7 +57,7 @@
                             <img src="{{asset('images/pth.avif')}}" alt>
                         </div>
                         <ul class="entry-meta">
-                            <li><a href="#"><img src="{{asset('images/pth.avxif')}}" alt> By Admin</a></li>
+                            <li><a href="#"><img src="{{asset('images/admin.jpg')}}" alt> By Admin</a></li>
                             <li><a href="#"><i class="bi bi-calendar3"></i> Sep 25,2021</a></li>
                             <li><a href="#"><i class="bi bi-suit-heart" style="color:red;"></i> 35</a></li>
                         </ul>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="post format-quote">
                         <ul class="entry-meta">
-                            <li><a href="#"><img src="{{asset('images/pth.avxif')}}" alt> By Admin</a></li>
+                            <li><a href="#"><img src="{{asset('images/admin.jpg')}}" alt> By Admin</a></li>
                             <li><a href="#"><i class="bi bi-calendar3"></i> Sep 25,2021</a></li>
                             <li><a href="#"><i class="bi bi-suit-heart" style="color:red;"></i> 35</a></li>
                         </ul>
@@ -78,7 +78,7 @@
                         <ul class="pg-pagination">
                             <li>
                                 <a href="#" aria-label="Previous">
-                                    <i class="fi ti-angle-left"></i>
+                            <i class="bi bi-arrow-left"></i>
                                 </a>
                             </li>
                             <li class="active"><a href="#">1</a></li>

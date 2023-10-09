@@ -12,6 +12,8 @@
                         <ul>
                             <li><a href="{{route('login')}}">login</a></li>
                             <li><a href="{{route('register')}}">Sign Up</a></li>
+                            +6
+                           <li> <a href="{{route('blogform')}}" class="theme-btn-s2">Know More</a><li>
                             <li><a class="theme-btn" href="{{route('donate')}}">Donate Now</a></li>
                         </ul>
                     </div>
