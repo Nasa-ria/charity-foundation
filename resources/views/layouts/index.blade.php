@@ -24,6 +24,7 @@
     <link href="{{asset('css/nice-select.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/light.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('css/todo.css')}}" rel="stylesheet"> --}}
     <link href="{{asset('css/signup.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
 
@@ -60,6 +61,7 @@
     <script src="{{asset('js/gsap.min.js')}}"></script>
     <!-- Custom script for this template -->
     <script src="{{asset('js/script.js')}}"></script>
+    {{-- <script src="{{asset('js/todo.js')}}"></script> --}}
 </body>
 
 </html>

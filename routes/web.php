@@ -37,3 +37,4 @@ Route::get('/contact',[DashboardController::class,'contact'])->name('contact');
 Route::get('/about',[DashboardController::class,'about'])->name('about');
 Route::get('/volunteer',[DashboardController::class,'volunteer'])->name('volunteer');
 Route::get('/blogform',[DashboardController::class,'blogform'])->name('blogform');
+Route::get('/todolist',[DashboardController::class,'todolist'])->name('todolist');

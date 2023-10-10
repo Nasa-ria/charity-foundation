@@ -49,4 +49,7 @@ class DashboardController extends Controller
     public function blogform(){
         return view('pages.admin.forms.blog');
     }
+    public function todolist(){
+        return view('pages.admin.todolist');
+    }
 }
