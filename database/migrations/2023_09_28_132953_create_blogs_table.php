@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('content');
+            $table->string('video_url')->nullable();
+            $table->string('video')->nullable();
             $table->integer('likes')->nullable();
             $table->json('tags')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }

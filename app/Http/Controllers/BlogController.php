@@ -43,10 +43,9 @@ class BlogController extends Controller
             'content' => 'required',
             'image' => 'required', 
             'status' => 'required', 
-            'tags' => 'nullable|array'
-            
-       
-
+            'tags' => 'nullable|array',
+            'video_url' => 'nullable|url', 
+          
         ]);
         $blog = Blog::create([
             'title' => $validated['title'],
@@ -54,6 +53,16 @@ class BlogController extends Controller
             'tags' =>$validated['tags'],
             'status' =>$validated['status'],
         ]);
+        if ($request->has('video_url')) {
+            $blog->video_url = $validated['video_url'];
+        }
+    
+        if ($request->hasFile('video')) {
+            $videoPath = $request->file('video')->store('videos');
+            $blog->video_path = $videoPath;
+        }
+        $blog->save();
+
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('images'); // Store the image in the storage/app/images directory
     
@@ -91,18 +100,41 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function updateBlog(Request $request, Blog $blog)
     {
+        dd($request->all());
         $request->validate([
             'title' => 'required',
             'content' => 'required',
             'tags' => 'nullable|array',
             'image' => 'required',
-            'status' => 'required', 
+            'status' => 'required',
+            'video_url' => 'nullable|url', 
+            // 'video' => 'nullable|mimes:mp4,avi,mpg|max:10240',
         ]);
             // Find the blog post you want to update
-            $blog = Blog::findOrFail($id);
-        
+            $id =  $request->input('blog_id');
+            Blog::find($id);
+            
+         if ($request->has('video_url')) {
+        $blog->video_url=  $request->input('video_url');
+
+        // Remove any uploaded video file if it exists
+        if ($blog->video_path) {
+            Storage::delete($blog->video_path);
+            $blog->video_path = null;
+        }
+    }
+
+    if ($request->hasFile('video')) {
+        // Delete the old video file if it exists
+        if ($blog->video_path) {
+            Storage::delete($blog->video_path);
+        }
+
+        $videoPath = $request->file('video')->store('videos');
+        $blog->video_path = $videoPath;
+    }
             // Update the blog post details
             $blog->title = $request->input('title');
             $blog->content = $request->input('content');
@@ -135,7 +167,7 @@ class BlogController extends Controller
                 'data' => $blog ,$image
             ]);
         
-        }
+        } 
 
     /**
      * Remove the specified resource from storage.
