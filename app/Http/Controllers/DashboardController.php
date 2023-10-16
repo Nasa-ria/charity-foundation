@@ -52,4 +52,8 @@ class DashboardController extends Controller
     public function todolist(){
         return view('pages.admin.todolist');
     }
+
+    public function admin(){
+        return view('pages.admin.index');
+    }
 }
