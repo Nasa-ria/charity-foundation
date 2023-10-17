@@ -46,14 +46,20 @@ class DashboardController extends Controller
         return view('pages.dashboard.volunteer');
     }
 
-    public function blogform(){
-        return view('pages.admin.forms.blog');
-    }
+    // public function blogform(){
+    //     return view('pages.admin.forms.blog');
+    // }
     public function todolist(){
         return view('pages.admin.todolist');
     }
 
     public function admin(){
         return view('pages.admin.index');
+    }
+    public function form(){
+        return view('pages.admin.iframe');
+    }
+    public function blogform(){
+        return view('pages.admin.form.general');
     }
 }

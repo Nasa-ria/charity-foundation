@@ -40,3 +40,5 @@ Route::get('/contact',[DashboardController::class,'contact'])->name('contact');
 Route::get('/about',[DashboardController::class,'about'])->name('about');
 Route::get('/volunteer',[DashboardController::class,'volunteer'])->name('volunteer');
 Route::get('/admin',[DashboardController::class,'admin'])->name('admin');
+Route::get('/admin/blogform',[DashboardController::class,'blogform'])->name('admin-blogform');
+Route::get('/admin/form',[DashboardController::class,'form'])->name('admin-forms');
