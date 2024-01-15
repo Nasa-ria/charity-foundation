@@ -38,6 +38,8 @@ class CauseController extends Controller
         $validated = $request->validate([
             'title' => 'required|string',
             'details' => 'required',
+            'goal' => 'required',
+            'rised' => 'required',
             'image' => 'required', 
             'status' => 'required', 
             
@@ -47,6 +49,8 @@ class CauseController extends Controller
         $cause = Cause::create([
             'title' => $validated['title'],
             'details' => $validated['details'],
+            'rised' => $validated['rised'],
+            'goal' => $validated['goal'],
             'status' =>$validated['status'],
         ]);
         if ($request->hasFile('image')) {
@@ -94,6 +98,8 @@ class CauseController extends Controller
         $request->validate([
             'title' => 'required',
             'details' => 'required',
+            'goal' => 'required',
+            'rised' => 'required',
             'image' => 'required',
             'status' => 'required', 
         ]);
@@ -103,6 +109,8 @@ class CauseController extends Controller
             // Update the blog post details
             $cause->title = $request->input('title');
             $cause->details = $request->input('details');
+            $cause->rised = $request->input('rised');
+            $cause->goal = $request->input('goal');
             $cause->status = $request->input('status');
         
             // Handle image update

@@ -13,7 +13,10 @@ class Cause extends Model
     protected $fillable = [
         'title',
         'details',
-        'status'
+        'status',
+        'tags',
+        'rised',
+        'gaol',
     ];
     
     public function images(): MorphMany

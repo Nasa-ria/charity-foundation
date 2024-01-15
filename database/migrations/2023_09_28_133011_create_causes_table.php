@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('title');
             $table->longtext('details');
             $table->string('status');
-            $table->string('video');
+            $table->string('tags');
+            $table->string('goal');
+            $table->string('rised');
             $table->timestamps();
         });
     }
