@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
     <title>AdminLTE 3 | Dashboard</title>
 
     <link rel="stylesheet"
@@ -46,6 +47,8 @@
 <link rel="stylesheet" href="{{asset('plugins/bs-stepper/css/bs-stepper.min.css')}}">
 
 <link rel="stylesheet" href="{{asset('plugins/dropzone/min/dropzone.min.css')}}">
+
+{{-- <link href="path/to/select2.min.css" rel="stylesheet" /> --}}
 
     <script nonce="29ff855d-03c1-4760-8ff8-60f4b8817eff">
         (function(w, d) {

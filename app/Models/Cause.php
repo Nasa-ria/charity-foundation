@@ -16,7 +16,7 @@ class Cause extends Model
         'status',
         'tags',
         'rised',
-        'gaol',
+        'goal',
     ];
     
     public function images(): MorphMany

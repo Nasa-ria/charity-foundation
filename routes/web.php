@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CauseController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\DashboardController;
 
@@ -123,3 +124,5 @@ Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('to-do');
 Route::get('/form/formlist',[IndexController::class,'formlist'])->name('formlist');
 Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 
+// cause
+Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store')->middleware('web');

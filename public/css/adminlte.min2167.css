@@ -55828,4 +55828,21 @@ a.text-muted:hover {
     border-color: #4b545c !important
 }
 
+#tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: #e0e0e0;
+}
 /*# sourceMappingURL=adminlte.min.css.map */

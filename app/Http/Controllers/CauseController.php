@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cause;
 use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
@@ -35,40 +36,56 @@ class CauseController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string',
-            'details' => 'required',
-            'goal' => 'required',
-            'rised' => 'required',
-            'image' => 'required', 
-            'status' => 'required', 
-            
-       
-
-        ]);
-        $cause = Cause::create([
-            'title' => $validated['title'],
-            'details' => $validated['details'],
-            'rised' => $validated['rised'],
-            'goal' => $validated['goal'],
-            'status' =>$validated['status'],
-        ]);
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images'); // Store the image in the storage/app/images directory
-    
-            // Create an image record for the blog post
-            $image = new Image([
-                'url' => $imagePath, // Assuming 'url' column in the image table stores the image path
-            ]);
-    
-            // Associate the image with the blog post using polymorphic relationship
-            $cause->images()->save($image);
-        }
+        // dd($request->all()); 
+        try{
+            $validated = $request->validate([
+                'title' => 'required|string',
+                'details' => 'required',
+                'goal' => 'required',
+                'rised' => 'required',
+                'image' => 'required', 
+                'status' => 'required', 
+                'tags' => 'required', 
+                
            
-        return response()->json([
+    
+            ]);
+            $cause = Cause::create([
+                'title' => $validated['title'],
+                'details' => $validated['details'],
+                'rised' => $validated['rised'],
+                'goal' => $validated['goal'],
+                'status' =>$validated['status'],
+                'tags' =>$validated['tags'],
+            ]);
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('images');// Store the image in the storage/app/images directory
+        
+                // Create an image record for the blog post
+                $image = new Image([
+                    'url' => $imagePath, // Assuming 'url' column in the image table stores the image path
+                ]);
+        
+                // Associate the image with the blog post using polymorphic relationship
+                $cause->images()->save($image);
+            }
+               
+            // return response()->json([
+            //     'data' => $cause,$image
+            // ]);
+            return response()->json(['message' => 'Form submitted successfully',
             'data' => $cause,$image
-        ]);
+                   ]);
+        } catch (\Exception $e) {
+            // Log the exception for debugging purposes
+            Log::error('Form submission failed: ' . $e->getMessage());
+
+            // Return an error response
+            return response()->json(['error' => 'An error occurred while processing the form', $e->getMessage() ], 500);
+        }
     }
+        
+    
 
     /**
      * Display the specified resource.

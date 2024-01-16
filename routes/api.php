@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CauseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,4 @@ Route::resource('task', TaskController::class);
 Route::post('/updat-blog',[BlogController::class,'updateBlog'])->name('updateBlog');
 Route::post('/register',[UserController::class,'register'])->name('register');
 Route::post('/signin',[UserController::class,'signin'])->name('signin');
+Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store');
