@@ -32,7 +32,7 @@ Route::get('/google/callback', [DashboardController::class,'loginWithGoogleCallb
 Route::get('/login',[DashboardController::class,'login'])->name('login');
 Route::get('/register',[DashboardController::class,'register'])->name('register');
 Route::get('/donate',[DashboardController::class,'donate'])->name('donate');
-Route::get('/cause',[DashboardController::class,'cause'])->name('cause');
+Route::get('/cause',[DashboardController::class,'cause'])->name('cause.user');
 Route::get('/event',[DashboardController::class,'event'])->name('event');
 Route::get('/blog',[DashboardController::class,'blog'])->name('blog');
 Route::get('/singleBlog',[DashboardController::class,'singleBlog'])->name('singleBlog');
@@ -66,7 +66,7 @@ Route::get('/examples/language-menu',[IndexController::class,'languageMenu'])->n
 Route::get('/examples/legacy-user-menu',[IndexController::class,'legacyUserMenu'])->name('legacy-user-menu');
 Route::get('/examples/lockscreen',[IndexController::class,'lockscreen'])->name('lockscreen');
 Route::get('/examples/login-v2',[IndexController::class,'loginV2'])->name('login-v2');
-Route::get('/examples/login',[IndexController::class,'login'])->name('login');
+// Route::get('/examples/login',[IndexController::class,'login'])->name('login');
 Route::get('/examples/pace',[IndexController::class,'pace'])->name('pace');
 Route::get('/examples/profile',[IndexController::class,'profile'])->name('profile');
 Route::get('/examples/project-add',[IndexController::class,'projectAdd'])->name('project-add');
@@ -125,4 +125,5 @@ Route::get('/form/formlist',[IndexController::class,'formlist'])->name('formlist
 Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 
 // cause
-Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store')->middleware('web');
+Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store');
+Route::get('/admin/login',[IndexController::class,'login'])->name('login.admin');

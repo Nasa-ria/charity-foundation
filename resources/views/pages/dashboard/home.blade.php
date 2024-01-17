@@ -108,7 +108,7 @@
                                     <li><a href="#">GOAL : $9860</a></li>
                                     <li><a href="#">RISED : $768</a></li>
                                 </ul>
-                                <h3><a href="{{route('cause')}}">Financial Help for Poor Families</a></h3>
+                                <h3><a href="{{route('cause.user')}}">Financial Help for Poor Families</a></h3>
                                 <p>It is a long established fact that a reader will be distracted.</p>
                             </div>
                         </div>
@@ -128,7 +128,7 @@
                                     <li><a href="#">GOAL : $9860</a></li>
                                     <li><a href="#">RISED : $768</a></li>
                                 </ul>
-                                <h3><a href="{{route('cause')}}">Education for Poor Children</a></h3>
+                                <h3><a href="{{route('cause.user')}}">Education for Poor Children</a></h3>
                                 <p>It is a long established fact that a reader will be distracted.</p>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                                     <li><a href="#">GOAL : $9860</a></li>
                                     <li><a href="#">RISED : $768</a></li>
                                 </ul>
-                                <h3><a href="{{route('cause')}}">Send Child to School for a Year</a></h3>
+                                <h3><a href="{{route('cause.user')}}">Send Child to School for a Year</a></h3>
                                 <p>It is a long established fact that a reader will be distracted.</p>
                             </div>
                         </div>
@@ -168,7 +168,7 @@
                                     <li><a href="#">GOAL : $9860</a></li>
                                     <li><a href="#">RISED : $768</a></li>
                                 </ul>
-                                <h3><a href="{{route('cause')}}">Food And Home for Children</a></h3>
+                                <h3><a href="{{route('cause.user')}}">Food And Home for Children</a></h3>
                                 <p>It is a long established fact that a reader will be distracted.</p>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                                     <li><a href="#">GOAL : $9860</a></li>
                                     <li><a href="#">RISED : $768</a></li>
                                 </ul>
-                                <h3><a href="{{route('cause')}}">Pure Water For The World</a></h3>
+                                <h3><a href="{{route('cause.user')}}">Pure Water For The World</a></h3>
                                 <p>It is a long established fact that a reader will be distracted.</p>
                             </div>
                         </div>
@@ -208,7 +208,7 @@
                                     <li><a href="#">GOAL : $9860</a></li>
                                     <li><a href="#">RISED : $768</a></li>
                                 </ul>
-                                <h3><a href="{{route('cause')}}">Recycling For Charity</a></h3>
+                                <h3><a href="{{route('cause.user')}}">Recycling For Charity</a></h3>
                                 <p>It is a long established fact that a reader will be distracted.</p>
                             </div>
                         </div>

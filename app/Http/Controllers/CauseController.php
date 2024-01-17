@@ -36,7 +36,6 @@ class CauseController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all()); 
         try{
             $validated = $request->validate([
                 'title' => 'required|string',
@@ -46,9 +45,6 @@ class CauseController extends Controller
                 'image' => 'required', 
                 'status' => 'required', 
                 'tags' => 'required', 
-                
-           
-    
             ]);
             $cause = Cause::create([
                 'title' => $validated['title'],
@@ -65,14 +61,9 @@ class CauseController extends Controller
                 $image = new Image([
                     'url' => $imagePath, // Assuming 'url' column in the image table stores the image path
                 ]);
-        
                 // Associate the image with the blog post using polymorphic relationship
                 $cause->images()->save($image);
             }
-               
-            // return response()->json([
-            //     'data' => $cause,$image
-            // ]);
             return response()->json(['message' => 'Form submitted successfully',
             'data' => $cause,$image
                    ]);

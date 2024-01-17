@@ -6,13 +6,13 @@
             <div class="container">
                 <div class="s3-m-10 s3-p-8 mt-5">
                     <div class="col-xs-12 col-md-offset-1 col-md-10">
-                        <div class="panel panel-default">
+                        {{-- <div class="panel panel-default"> --}}
                             <div class="panel-heading panel-title">
                                 <h1 class="s3-fs-xs-3 text-center mt-5">CAUSE FORM</h1>
                                 {{-- <h6>Department of Nutrition, Food and Exercise Sciences</h6> --}}
                             </div>
                             <div class="panel-body">
-                                <form id="myForm" method="POST" action="{{ route('cause.store') }}">
+                                <form id="myForm" method="POST" action="{{ route('cause.store') }}" enctype="multipart/form-data" >
                                     @csrf
                                     Please complete all areas:
                                     <div class="form-group">
@@ -44,19 +44,24 @@
 
                                     <div class="form-group">
                                         <label for="InputFile1">Image</label>
-                                        <input type="file" name="image" required multiple>
+                                        <input type="file" name="image" required >
                                     </div>
                                      
                                     <div id="tag-container">
-                                        <label for="InputFile1">Tags</label>
-                                        <input type="text" id="tags"  name= "tags" placeholder="add skills" />
+                                        <label for="InputFile1">Tags</label> 
+                                        <input type="text" id="tags"  name= "tags" placeholder="add tags" />
                                         <div id="tag-list"></div>
                                     </div>
 
+                                    {{-- <div class="form-group">
+                                        <label for="tags">Tags</label>
+                                        <input id="tags" name="tags" placeholder="Add skills" value="HTML,CSS,JavaScript" required>
+                                    </div> --}}
+
                                     <hr />
-                                    <input type="hidden" id="formStatus" name="status" value="{{ 'submitted' }}"> <!-- Default value is "submitted" -->
+                                    <input type="hidden" id="formStatus" name="status" value="{{ 'submitted' }}"> 
                                      
-                                    <div class="text-center mb-5">
+                                    <div class="text-center mt-5">
                                         <button type="button" onclick="saveDraft()" class="btn btn-primary">Save Draft</button>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
@@ -64,10 +69,9 @@
                                 
                              
 
-                                </form>
                             </div>
 
-                        </div>
+                        {{-- </div> --}}
                     </div>
                 </div>
         </section>
@@ -102,6 +106,17 @@
         });
         tagList.appendChild(tag);
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    new Tagify(document.querySelector('input[name=tags]'), {
+        enforceWhitelist: true,
+        whitelist: ['HTML', 'CSS', 'JavaScript'], // Example whitelist of skills/tags
+        dropdown: {
+            enabled: 1,
+            maxItems: 5
+        }
+    });
 });
 
     </script>

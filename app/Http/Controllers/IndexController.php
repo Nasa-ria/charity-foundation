@@ -70,9 +70,9 @@ class IndexController extends Controller
     public function  loginV2(){
         return view('pages.examples.login-v2');
     }
-    public function  login(){
-        return view('pages.examples.login');
-    }
+    // public function  login(){
+    //     return view('pages.examples.login');
+    // }
     public function  pace(){
         return view('pages.examples.pace');
     }
@@ -242,6 +242,10 @@ class IndexController extends Controller
     }
     public function  cause(){
         return view('pages.admin.pages.forms.cause');
+    }
+
+    public function  login(){
+        return view('pages.admin.login');
     }
     
     

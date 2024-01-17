@@ -41,12 +41,10 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-
         $validated = $request->validate([
             'name' => 'required|string',
             'email' => 'required',
             'password' => 'required',
-
         ]);
        
         $profileImagePath = null;
@@ -57,10 +55,8 @@ class UserController extends Controller
             'name' => $validated['name'],
             'email' => $validated['email'],
             'password' => Hash::make($validated['password']),
-            // 'profile' => $profileImagePath,
+            'profile' => $profileImagePath,
         ]);
-       
-    
         return response()->json([
             'data' => $user->refresh()
         ]);

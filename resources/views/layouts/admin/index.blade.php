@@ -11,6 +11,8 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
 
@@ -47,6 +49,7 @@
 <link rel="stylesheet" href="{{asset('plugins/bs-stepper/css/bs-stepper.min.css')}}">
 
 <link rel="stylesheet" href="{{asset('plugins/dropzone/min/dropzone.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/login.css')}}">
 
 {{-- <link href="path/to/select2.min.css" rel="stylesheet" /> --}}
 
