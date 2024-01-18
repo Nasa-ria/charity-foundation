@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\User;
+use App\Models\Image;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -41,31 +44,51 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required',
-            'password' => 'required',
-        ]);
-       
-        $profileImagePath = null;
-        if ($request->hasFile('profile')) {
-            $profileImagePath = $request->file('profile')->store('profile');
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required|string',
+                'email' => 'required|email|unique:users,email',
+                'password' => 'required|min:8', // Example password validation
+                'profile' => 'nullable|image', // Optional profile image validation
+            ]);
+
+            $user = User::create([
+                'name' => $validatedData['name'],
+                'email' => $validatedData['email'],
+                'password' => Hash::make($validatedData['password']),
+            ]);
+
+            // Handle profile image upload
+            if ($request->hasFile('profile')) {
+                $profileImage = $request->file('profile');
+                $profileImagePath = $profileImage->store('profiles', 'public');
+
+                $image = new Image(['url' => $profileImagePath]);
+                $user->images()->save($image);
+            }
+
+            // return response()->json([
+            //     'message' => 'User registered successfully',
+            //     'user' => $user,
+            // ], 201);
+            return redirect()->route('index')->with('success', 'User registered successfully');
+        } catch (\Exception $e) {
+            // Log the exception for debugging purposes
+            Log::error('User registration failed: ' . $e->getMessage());
+
+            // Return an error response
+            // return response()->json([
+            //     'error' => 'User registration failed. Please try again later.',
+            // ], 500);
+            return redirect()->back()->with('error', 'User registration failed. Please try again later.');
         }
-        $user = User::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
-            'profile' => $profileImagePath,
-        ]);
-        return response()->json([
-            'data' => $user->refresh()
-        ]);
     }
 
-    public function loginWithGoogle()
+
+    public function redirectToGoogle()
     {
         try{
-           $google= Socialite::driver('google')->stateless()->redirect();
+            return Socialite::driver('google')->redirect();
          
         } catch (\Exception $e) {
             return response()->json(['message' => ' authentication failed: ' . $e->getMessage()]);
@@ -84,8 +107,9 @@ class UserController extends Controller
     }
 
 
-    public function loginWithFacebookCallback(){
-        $socialUser = Socialite::driver('facebook')->user();
+    public function handleGoogleCallback(){
+        try {
+        $socialUser = Socialite::driver('google.')->user();
     
         $user = User::where('email', $socialUser->email)->first();
     
@@ -103,8 +127,13 @@ class UserController extends Controller
             Auth::login($newUser);
             return redirect('/');
         }
+        } catch (\Exception $e) {
+            // Handle other exceptions
+            return redirect()->route('login')->with('error', 'Google authentication failed: ' . $e->getMessage());
+        }
+        }
 
-    }
+    
     public function loginWithGoogleCallback(){
         $socialUser = Socialite::driver('facebook')->user();
     

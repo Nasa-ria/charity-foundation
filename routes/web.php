@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CauseController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\DashboardController;
@@ -127,3 +128,6 @@ Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 // cause
 Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store');
 Route::get('/admin/login',[IndexController::class,'login'])->name('login.admin');
+Route::post('/admin/register',[UserController::class,'register'])->name('register');
+Route::get('/auth/google', [UserController::class,'redirectToGoogle'])->name('google.login');
+Route::get('/auth/google/callback', [UserController::class,'handleGoogleCallback']);
