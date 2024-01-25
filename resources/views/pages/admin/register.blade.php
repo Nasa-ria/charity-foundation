@@ -46,7 +46,7 @@
                                                 </label>
                                             </div>
                                             <div class="w-50 text-md-right">
-                                                <a href="#" style="color:black ">Forgot Password</a>
+                                                <a href="{{route('password.request')}}" style="color:black ">Forgot Password</a>
                                             </div>
                                         </div>
                                     </form>

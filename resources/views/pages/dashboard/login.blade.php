@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form class="tp-accountWrapper" action="#">
+                            <form  class="signin-form" method="POST" action="{{ route('signup') }}" >
                                 <div class="tp-accountInfo">
                                     <div class="tp-accountInfoHeader">
                                         {{-- <a href="#"><img src="{{asset('images/logo.png')}}" alt=""></a> --}}

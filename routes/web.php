@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CauseController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\DashboardController;
 
@@ -128,6 +129,23 @@ Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 // cause
 Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store');
 Route::get('/admin/login',[IndexController::class,'login'])->name('login.admin');
+Route::get('/user/login',[DashboardController::class,'login'])->name('login');
+Route::post('/user/login',[UserController::class,'signup'])->name('signup');
+Route::get('user/register',[DashboardController::class,'register'])->name('user.register');
 Route::post('/admin/register',[UserController::class,'register'])->name('register');
 Route::get('/auth/google', [UserController::class,'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [UserController::class,'handleGoogleCallback']);
+
+// Route::get('/forgot-password', function () {
+//     return view('auth.forgot-password');
+// })->middleware('guest')->name('password.request');
+
+// Route::get('/reset-password/{token}', function (string $token) {
+//     return view('auth.reset-password', ['token' => $token]);.
+// })->middleware('guest')->name('password.reset');
+
+Route::get('/forgot-password',[UserController::class,'forget_password'])->middleware('guest')->name('password.request');
+Route::post('/forgot-password',[UserController::class,'forgetpassword'])->middleware('guest')->name('password.request.form');
+Route::get('/reset-password/{token}',[UserController::class,'password_reset'])->middleware('guest')->name('password.reset');
+Route::post('/reset-password/{token}',[UserController::class,'passwordreset'])->middleware('guest')->name('password.reset.form');
+Route::get('/send-resetpassword-email', [EmailController::class, 'forgetpasswordEmail'])->name("forget.password.Email");

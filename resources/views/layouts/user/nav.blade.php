@@ -11,7 +11,7 @@
                     <div class="contact-info">
                         <ul>
                             <li><a href="{{route('login')}}">login</a></li>
-                            <li><a href="{{route('register')}}">Sign Up</a></li>
+                            <li><a href="{{route('user.register')}}">Sign Up</a></li>
                             {{-- <li> <a href="{{route('blogform')}}" >blogform</a><li> --}}
                            {{-- <li> <a href="{{route('todolist')}}" >todo</a><li> --}}
                             <li><a class="theme-btn" href="{{route('donate')}}">Donate Now</a></li>

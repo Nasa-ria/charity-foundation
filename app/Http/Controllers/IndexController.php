@@ -245,7 +245,7 @@ class IndexController extends Controller
     }
 
     public function  login(){
-        return view('pages.admin.login');
+        return view('pages.admin.register');
     }
     
     
