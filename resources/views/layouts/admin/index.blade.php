@@ -162,6 +162,8 @@
     <script src={{ asset("js/demo.js")}}></script>
 
     <script src={{ asset("pages/dashboard.js")}}></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?&callback=initMap" async defer></script>
 </body>
 
 <!-- Mirrored from adminlte.io/themes/v3/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jan 2024 09:46:42 GMT -->

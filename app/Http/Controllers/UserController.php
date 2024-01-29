@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Password;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -35,22 +36,25 @@ class UserController extends Controller
 
             $token = $user->createToken("User")->accessToken;
 
-            return response()->json([
-                'data' => $user->refresh(),
-                'token' => $token,
-            ]);
+            // return response()->json([
+            //     'data' => $user->refresh(),
+            //     'token' => $token,
+            // ]);
+            return redirect()->route('home')->with('success', 'User Login successfully');
         } else {
             return "fail";
         }
+      
     }
 
     public function register(Request $request)
     {
+        // dd($request->all());
         try {
             $validatedData = $request->validate([
                 'name' => 'required|string',
                 'email' => 'required|email|unique:users,email',
-                'password' => 'required|min:8', // Example password validation
+                'password' => 'required|confirmed|min:8', // Example password validation
                 'profile' => 'nullable|image', // Optional profile image validation
             ]);
 
@@ -73,7 +77,7 @@ class UserController extends Controller
             //     'message' => 'User registered successfully',
             //     'user' => $user,
             // ], 201);
-            return redirect()->route('index')->with('success', 'User registered successfully');
+            return redirect()->route('home')->with('success', 'User registered successfully');
         } catch (\Exception $e) {
             // Log the exception for debugging purposes
             Log::error('User registration failed: ' . $e->getMessage());

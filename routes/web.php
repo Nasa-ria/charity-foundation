@@ -25,14 +25,16 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-
+// user
 Route::get('/',[DashboardController::class,'index'])->name('home');
 Route::get('/login/facebook', [DashboardController::class,'loginWithFacebook'])->name('loginWithFavebook');
 Route::get('/facebook/callback', [DashboardController::class,'loginWithFacebookCallback'])->name('loginWithFacebookCallback');  
 Route::get('/login/google', [DashboardController::class,'loginWithGoogle'])->name('loginWithGoogle');
-Route::get('/google/callback', [DashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback');  
-Route::get('/login',[DashboardController::class,'login'])->name('login');
-Route::get('/register',[DashboardController::class,'register'])->name('register');
+Route::get('/google/callback', [DashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback'); 
+Route::get('user/register',[DashboardController::class,'register'])->name('user.register');
+Route::get('/user/login',[DashboardController::class,'login'])->name('login'); 
+// Route::get('/login',[DashboardController::class,'login'])->name('login');
+// Route::get('/register',[DashboardController::class,'register'])->name('register');
 Route::get('/donate',[DashboardController::class,'donate'])->name('donate');
 Route::get('/cause',[DashboardController::class,'cause'])->name('cause.user');
 Route::get('/event',[DashboardController::class,'event'])->name('event');
@@ -120,32 +122,23 @@ Route::get('/kanban',[IndexController::class,'kanban'])->name('kanban');
 Route::get('/starter',[IndexController::class,'starter'])->name('starter');
 Route::get('/widgets',[IndexController::class,'widgets'])->name('widgets');
 
+
+
+// admin
 Route::get('/forms/post',[IndexController::class,'post'])->name('post');
 Route::get('/tables/userDashboard',[IndexController::class,'userDashboard'])->name('userDasboard');
 Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('to-do');
 Route::get('/form/formlist',[IndexController::class,'formlist'])->name('formlist');
 Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
-
-// cause
 Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store');
 Route::get('/admin/login',[IndexController::class,'login'])->name('login.admin');
-Route::get('/user/login',[DashboardController::class,'login'])->name('login');
-Route::post('/user/login',[UserController::class,'signup'])->name('signup');
-Route::get('user/register',[DashboardController::class,'register'])->name('user.register');
+Route::post('/user/login',[UserController::class,'signIn'])->name('signIn');
 Route::post('/admin/register',[UserController::class,'register'])->name('register');
 Route::get('/auth/google', [UserController::class,'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [UserController::class,'handleGoogleCallback']);
-
-// Route::get('/forgot-password', function () {
-//     return view('auth.forgot-password');
-// })->middleware('guest')->name('password.request');
-
-// Route::get('/reset-password/{token}', function (string $token) {
-//     return view('auth.reset-password', ['token' => $token]);.
-// })->middleware('guest')->name('password.reset');
-
 Route::get('/forgot-password',[UserController::class,'forget_password'])->middleware('guest')->name('password.request');
 Route::post('/forgot-password',[UserController::class,'forgetpassword'])->middleware('guest')->name('password.request.form');
 Route::get('/reset-password/{token}',[UserController::class,'password_reset'])->middleware('guest')->name('password.reset');
 Route::post('/reset-password/{token}',[UserController::class,'passwordreset'])->middleware('guest')->name('password.reset.form');
 Route::get('/send-resetpassword-email', [EmailController::class, 'forgetpasswordEmail'])->name("forget.password.Email");
+Route::get('/admin/event',[IndexController::class,'event'])->name('event.form');

@@ -2,11 +2,13 @@
 @section('content')
     <div class="content-wrapper">
         <section class="content">
-            <div class="tp-login-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form  class="signin-form" method="POST" action="{{ route('signup') }}" >
+           <div class="tp-login-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                            {{-- <form  class="signin-form" method="POST" action="{{ route('signup') }}" > --}}
+                                <form class="tp-accountWrapper" method="POST" action="{{ route('signIn') }}">
+                                    @csrf
                                 <div class="tp-accountInfo">
                                     <div class="tp-accountInfoHeader">
                                         {{-- <a href="#"><img src="{{asset('images/logo.png')}}" alt=""></a> --}}
@@ -37,7 +39,7 @@
                                         <div class="col-lg-12 col-md-12 col-12">
                                             <div class="form-group">
                                                 <label>Password</label>
-                                                <input class="pwd6" type="password" placeholder="" value="123456"
+                                                <input class="pwd6" type="password"  name="password" placeholder="" value="123456"
                                                     name="pass">
                                             </div>
                                             <span class="input-group-btn">
@@ -68,7 +70,7 @@
                                         <!-- Add more social media login buttons as needed -->
 
                                     </ul>
-                                    <p class="subText">Don't have an account? <a href="register.html">Create free
+                                    <p class="subText">Don't have an account?  <li><a href="{{route('user.register')}}">Create free
                                             account</a></p>
                                 </div>
                             </form>

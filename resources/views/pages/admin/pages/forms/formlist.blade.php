@@ -31,7 +31,7 @@
                                 <td>2.</td>
                                 <td>Event</td>
                                 
-                                <td><a class="theme-btn" href="{{route('cause')}}">add</a></td>
+                                <td><a class="theme-btn" href="{{route('event.form')}}">add</a></td>
                             </tr>
                             <tr>
                                 <td>3.</td>

@@ -248,7 +248,9 @@ class IndexController extends Controller
         return view('pages.admin.register');
     }
     
-    
+    public function  event(){
+        return view('pages.admin.pages.forms.event');
+    }
     
     
 }
