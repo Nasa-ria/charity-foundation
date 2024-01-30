@@ -671,7 +671,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('formlist')}}" class="nav-link">
+                    <a href="{{route('admin.formlist')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Form</p>
                     </a>
@@ -689,13 +689,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('to-do')}}" class="nav-link">
+                    <a href="{{route('admin.to-do')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>To-Do</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('userDasboard')}}" class="nav-link">
+                    <a href="{{route('admin.userDasboard')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>User Dashboard</p>
                     </a>

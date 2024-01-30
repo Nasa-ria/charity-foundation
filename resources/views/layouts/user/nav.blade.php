@@ -10,11 +10,11 @@
                 <div class="col col-md-6 col-sm-5 col-12">
                     <div class="contact-info">
                         <ul>
-                            <li><a href="{{route('login')}}">login</a></li>
+                            <li><a href="{{route('user.login')}}">login</a></li>
                             <li><a href="{{route('user.register')}}">Sign Up</a></li>
                             {{-- <li> <a href="{{route('blogform')}}" >blogform</a><li> --}}
                            {{-- <li> <a href="{{route('todolist')}}" >todo</a><li> --}}
-                            <li><a class="theme-btn" href="{{route('donate')}}">Donate Now</a></li>
+                            <li><a class="theme-btn" href="{{route('user.donate')}}">Donate Now</a></li>
                         </ul>
                     </div>
                 </div>
@@ -39,16 +39,16 @@
                         <a href="{{route('home')}}">Home</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="{{route('cause')}}">Causes</a>
+                        <a href="{{route('user.cause')}}">Causes</a>
 
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="{{route('event')}}">Event</a>
+                        <a href="{{route('user.event')}}">Event</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="{{route('blog')}}">Blog</a>
+                        <a href="{{route('user.blog')}}">Blog</a>
                     </li>
-                    <li><a href="{{route('contact')}}">Contact</a></li>
+                    <li><a href="{{route('user.contact')}}">Contact</a></li>
                 </ul>
             </div><!-- end of nav-collapse -->
             <div class="cart-search-contact">

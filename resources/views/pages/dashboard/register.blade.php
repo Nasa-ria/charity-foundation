@@ -65,7 +65,7 @@
                             <li><button class="twitter" tabindex="0" type="button"><span><i class="fa fa-twitter"></i></span></button></li>
                             <li><button class="linkedin" tabindex="0" type="button"><span><i class="fa fa-linkedin"></i></span></button></li>
                         </ul>
-                        <p class="subText">Don't have an account?  <a href="{{route('user.register')}}">Create free account</a></p>
+                        <p class="subText"> Have an account?  <a href="{{route('login')}}">Login</a></p>
                     </div>
                 </form>
             </div>

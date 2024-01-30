@@ -57,11 +57,11 @@
                                 <h3>Useful Links</h3>
                             </div>
                             <ul>
-                                <li><a href="{{route('about')}}">About Us</a></li>
-                                <li><a href="{{route('cause')}}">Our Causes</a></li>
-                                <li><a href="{{route('donate')}}">Donate</a></li>
-                                <li><a href="{{route('contact')}}">Contact Us</a></li>
-                                <li><a href="{{route('event')}}">Our Event</a></li>
+                                <li><a href="{{route('user.about')}}">About Us</a></li>
+                                <li><a href="{{route('user.cause')}}">Our Causes</a></li>
+                                <li><a href="{{route('user.donate')}}">Donate</a></li>
+                                <li><a href="{{route('user.contact')}}">Contact Us</a></li>
+                                <li><a href="{{route('user.event')}}">Our Event</a></li>
                             </ul>
                         </div>
                     </div>

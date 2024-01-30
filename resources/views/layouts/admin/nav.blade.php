@@ -9,7 +9,7 @@
             <a href="{{route('index')}}" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{route('login.admin')}}" class="nav-link">login</a>
+            <a href="{{route('admin.login')}}" class="nav-link">login</a>
         </li>
     </ul>
 

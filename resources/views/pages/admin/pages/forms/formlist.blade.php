@@ -23,7 +23,7 @@
                                 <td>1.</td>
                                 <td>Cause</td>
                            
-                                    <td><a class="theme-btn" href="{{route('cause')}}">add</a></td>
+                                    <td><a class="theme-btn" href="{{route('admin.cause')}}">add</a></td>
                             
                                
                             </tr>
@@ -31,19 +31,19 @@
                                 <td>2.</td>
                                 <td>Event</td>
                                 
-                                <td><a class="theme-btn" href="{{route('event.form')}}">add</a></td>
+                                <td><a class="theme-btn" href="{{route('admin.event')}}">add</a></td>
                             </tr>
                             <tr>
                                 <td>3.</td>
                                 <td>Add Picture to Gallery</td>
                               
-                                <td><a class="theme-btn" href="{{route('cause')}}">add</a></td>
+                                <td><a class="theme-btn" href="{{route('admin.cause')}}">add</a></td>
                             </tr>
                             <tr>
                                 <td>4.</td>
                                 <td>Fix and squish bugs</td>
                              
-                                <td><a class="theme-btn" href="{{route('cause')}}">add</a></td>
+                                <td><a class="theme-btn" href="{{route('admin.cause')}}">add</a></td>
                             </tr>
                         </tbody>
                     </table>

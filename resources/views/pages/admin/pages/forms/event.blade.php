@@ -31,13 +31,18 @@
                                     </div> --}}
 
                                     <div class="form-group">
-                                        <label for="details">description</label>
+                                        <label for="details">details</label>
                                         <textarea id="details" class="form-control" name="details" rows="4" cols="50" style="width: 58em" required></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="details">event mission </label>
-                                        <textarea id="details" class="form-control" name="details" rows="4" cols="50" style="width: 58em" required></textarea>
-                                    </div>
+                                        <label for="event_mission">event mission </label>
+                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="Reward 1">
+                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
+                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
+                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
+                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
+                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
+                                    
 
                                     <div class="form-group">
                                         <label for="details">Map </label>
