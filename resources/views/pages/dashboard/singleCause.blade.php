@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.user.index')
 @section('content')
 
 <div class="tp-breadcumb-area">

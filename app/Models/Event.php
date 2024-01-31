@@ -15,4 +15,8 @@ class Event extends Model
         'date',
         'status'
     ];
+
+    protected $casts = [
+        'event_mission ' => 'array'
+    ];
 }

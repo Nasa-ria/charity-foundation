@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CauseController;
+use App\Http\Controllers\EmailController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -21,7 +25,7 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-
+// user
 Route::get('/',[DashboardController::class,'index'])->name('home');
 Route::get('/login/facebook', [DashboardController::class,'loginWithFacebook'])->name('loginWithFavebook');
 Route::get('/facebook/callback', [DashboardController::class,'loginWithFacebookCallback'])->name('loginWithFacebookCallback');  
@@ -39,10 +43,6 @@ Route::get('/singleEvent',[DashboardController::class,'singleEvent'])->name('sin
 Route::get('/contact',[DashboardController::class,'contact'])->name('contact');
 Route::get('/about',[DashboardController::class,'about'])->name('about');
 Route::get('/volunteer',[DashboardController::class,'volunteer'])->name('volunteer');
-
-// ADMIN
-
 Route::get('/admin',[DashboardController::class,'admin'])->name('admin');
 Route::get('/admin/blogform',[DashboardController::class,'blogform'])->name('admin-blogform');
 Route::get('/admin/form',[DashboardController::class,'form'])->name('admin-forms');
-Route::get('/admin/layout/boxed',[DashboardController::class,'layoutboxed'])->name('boxed');
