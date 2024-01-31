@@ -62,4 +62,7 @@ class DashboardController extends Controller
     public function blogform(){
         return view('pages.admin.form.general');
     }
+    public function layoutboxed(){
+        return view('pages.admin.layout.boxed');
+    }
 }

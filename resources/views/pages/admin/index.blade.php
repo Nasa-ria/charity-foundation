@@ -15,6 +15,21 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+    
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+
     <script nonce="ad36d8f5-6f22-4162-9654-659b389abaa8">
         (function(w, d) {
             ! function(a, b, c, d) {
@@ -312,49 +327,49 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                  {{-- <a href="{{route('top-nav')}}" class="nav-link"> --}}
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Top Navigation</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                  {{-- <a href="{{route('top-nav-sidebar')}}" class="nav-link"> --}}
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Top Navigation + Sidebar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/boxed.html" class="nav-link">
+                               <a href="{{route('boxed')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Boxed</p>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                            <li class="nav-item"> 
+                                  {{-- <a href="{{route('fixed-sidebar')}}" class="nav-link"> --}}
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Sidebar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                            {{-- <a href="{{route('fixed-sidebar-custom')}}" class="nav-link"> --}}
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Sidebar <small>+ Custom Area</small></p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                              {{-- <a href="{{route('fixed-topnav')}}" class="nav-link"> --}}
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Navbar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/fixed-footer.html" class="nav-link">
+                               {{-- <a href="{{route('fixed-footer')}}" class="nav-link"> --}}
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Footer</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                               {{-- <a href="{{route('collapsed-sidebar')}}" class="nav-link"> --}}
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Collapsed Sidebar</p>
                                 </a>
