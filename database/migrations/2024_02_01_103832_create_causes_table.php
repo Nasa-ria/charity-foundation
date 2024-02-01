@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tags_to_json', function (Blueprint $table) {
+        Schema::table('causes', function (Blueprint $table) {
             $table->json('tags')->change();
            
         });
@@ -22,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tags_to_json');
+        Schema::table('causes', function (Blueprint $table) {
+            $table->json('tags')->change();
+           
+        });
     }
 };

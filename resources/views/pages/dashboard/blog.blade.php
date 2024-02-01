@@ -1,5 +1,5 @@
 
-@extends('layouts.index')
+@extends('layouts.user.index')
 @section('content')
 
 <div class="tp-breadcumb-area">
@@ -33,7 +33,7 @@
                         </ul>
                         <h3><a href="#">Help the helpless who need you.</a></h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
-                        <a href="{{route('singleBlog')}}" class="read-more">Read More...</a>
+                        <a href="{{route('user.singleBlog')}}" class="read-more">Read More...</a>
                     </div>
                     <div class="post format-video">
                         <div class="entry-media video-holder">
@@ -49,7 +49,7 @@
                         </ul>
                         <h3><a href="#">They are waiting for your help.</a></h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
-                        <a href="{{route('singleBlog')}}"class="read-more">Read More...</a>
+                        <a href="{{route('user.singleBlog')}}"class="read-more">Read More...</a>
                     </div>
                     <div class="post format-gallery">
                         <div class="entry-media post-slider">
@@ -63,7 +63,7 @@
                         </ul>
                         <h3><a href="#">They are waiting for your help.</a></h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
-                        <a href="{{route('singleBlog')}}" class="read-more">Read More...</a>
+                        <a href="{{route('user.singleBlog')}}" class="read-more">Read More...</a>
                     </div>
                     <div class="post format-quote">
                         <ul class="entry-meta">
@@ -123,7 +123,7 @@
                                     <img src="{{asset('images/pth.avif')}}" alt>
                                 </div>
                                 <div class="details">
-                                    <h4><a href="{{route('singleBlog')}}">Many Children are suffering a lot for food.</a></h4>
+                                    <h4><a href="{{route('user.singleBlog')}}">Many Children are suffering a lot for food.</a></h4>
                                     <span class="date">22 Sep 2021</span>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                                     <img src="{{asset('images/pth.avif')}}" alt>
                                 </div>
                                 <div class="details">
-                                    <h4><a href="{{route('singleBlog')}}">Be kind for the poor people and the kids.</a></h4>
+                                    <h4><a href="{{route('user.singleBlog')}}">Be kind for the poor people and the kids.</a></h4>
                                     <span class="date">22 Sep 2021</span>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
                                     <img src="{{asset('images/pth.avif')}}" alt>
                                 </div>
                                 <div class="details">
-                                    <h4><a href="{{route('singleBlog')}}">Be soft and kind for the poor people.</a></h4>
+                                    <h4><a href="{{route('user.singleBlog')}}">Be soft and kind for the poor people.</a></h4>
                                     <span class="date">22 Sep 2021</span>
                                 </div>
                             </div>
