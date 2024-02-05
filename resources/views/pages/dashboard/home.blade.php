@@ -159,7 +159,7 @@
                                 <div class="cause-img">
                                     <img src="{{asset('images/pho.avif')}}" alt="">
                                     <div class="case-btn">
-                                        <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
+                                        <a href="{{route('user.donate')}}" class="theme-btn">Donate Now</a>
                                     </div>
                                 </div>
                             </div>
