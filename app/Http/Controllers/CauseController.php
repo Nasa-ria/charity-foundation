@@ -52,8 +52,10 @@ class CauseController extends Controller
                 'rised' => $validated['rised'],
                 'goal' => $validated['goal'],
                 'status' =>$validated['status'],
-                'tags' =>$validated['tags'],
+                'tags' => json_encode($validated['tags']),
             ]);
+
+          
             if ($request->hasFile('image')) {
                 $imagePath = $request->file('image')->store('images');// Store the image in the storage/app/images directory
         

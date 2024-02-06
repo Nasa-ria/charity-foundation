@@ -30,7 +30,6 @@ Route::get('/',[DashboardController::class,'index'])->name('home');
 Route::get('/login/facebook', [DashboardController::class,'loginWithFacebook'])->name('loginWithFavebook');
 Route::get('/facebook/callback', [DashboardController::class,'loginWithFacebookCallback'])->name('loginWithFacebookCallback');  
 Route::get('/login/google', [DashboardController::class,'loginWithGoogle'])->name('loginWithGoogle');
-<<<<<<< HEAD
 Route::get('/google/callback', [DashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback');  
 Route::get('/login',[DashboardController::class,'login'])->name('login');
 Route::get('/register',[DashboardController::class,'register'])->name('register');
@@ -48,16 +47,13 @@ Route::get('/admin',[DashboardController::class,'admin'])->name('admin');
 Route::get('/admin/blogform',[DashboardController::class,'blogform'])->name('admin-blogform');
 Route::get('/admin/form',[DashboardController::class,'form'])->name('admin-forms');
 
-=======
 Route::get('/google/callback', [DashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback'); 
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 Route::get('/register',[DashboardController::class,'register'])->name('user.register');
 Route::get('/login',[DashboardController::class,'login'])->name('user.login'); 
 Route::get('/donate',[DashboardController::class,'donate'])->name('user.donate');
 Route::get('/cause',[DashboardController::class,'cause'])->name('user.cause');
 Route::get('/event',[DashboardController::class,'event'])->name('user.event');
 Route::get('/blog',[DashboardController::class,'blog'])->name('user.blog');
-<<<<<<< HEAD
 Route::get('/singleBlog',[DashboardController::class,'singleBlog'])->name('iser.singleBlog');
 Route::get('/singleCause',[DashboardController::class,'singleCause'])->name('user.singleCause');
 Route::get('/singleEvent',[DashboardController::class,'singleEvent'])->name('user.singleEvent');
@@ -79,23 +75,18 @@ Route::get('/donate',[DashboardController::class,'donate'])->name('user.donate')
 Route::get('/cause',[DashboardController::class,'cause'])->name('user.cause');
 Route::get('/event',[DashboardController::class,'event'])->name('user.event');
 Route::get('/blog',[DashboardController::class,'blog'])->name('user.blog');
-=======
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 Route::get('/singleBlog',[DashboardController::class,'singleBlog'])->name('user.singleBlog');
 Route::get('/singleCause',[DashboardController::class,'singleCause'])->name('user.singleCause');
 Route::get('/singleEvent',[DashboardController::class,'singleEvent'])->name('user.singleEvent');
 Route::get('/contact',[DashboardController::class,'contact'])->name('user.contact');
 Route::get('/about',[DashboardController::class,'about'])->name('user.about');
 Route::get('/volunteer',[DashboardController::class,'volunteer'])->name('user.volunteer');
-<<<<<<< HEAD
 Route::get('/admin',[DashboardController::class,'admin'])->name('user.admin');
 Route::get('/admin/blogform',[DashboardController::class,'blogform'])->name('');
 
-=======
 // Route::get('/admin',[DashboardController::class,'admin'])->name('admin');
 // Route::get('/user/admin/blogform',[DashboardController::class,'blogform'])->name('admin-blogform');
 // Route::get('/user/admin/form',[DashboardController::class,'form'])->name('admin-forms');
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 
 // admin
 Route::get('/forms/post',[IndexController::class,'post'])->name('admin.post');
@@ -122,14 +113,11 @@ Route::get('/admin',[IndexController::class,'index'])->name('index');
 
 
 
-<<<<<<< HEAD
 // Route::get('/',[IndexController::class,'index'])->name('index');
-=======
 
 
 
 
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 Route::get('/charts/charjs',[IndexController::class,'chartjs'])->name('chartjs');
 Route::get('/charts/flot',[IndexController::class,'flot'])->name('flot');
 Route::get('/charts/inline',[IndexController::class,'inline'])->name('inline');
@@ -149,11 +137,8 @@ Route::get('/examples/language-menu',[IndexController::class,'languageMenu'])->n
 Route::get('/examples/legacy-user-menu',[IndexController::class,'legacyUserMenu'])->name('legacy-user-menu');
 Route::get('/examples/lockscreen',[IndexController::class,'lockscreen'])->name('lockscreen');
 Route::get('/examples/login-v2',[IndexController::class,'loginV2'])->name('login-v2');
-<<<<<<< HEAD
 Route::get('/examples/login',[IndexController::class,'login'])->name('login');
-=======
 // Route::get('/examples/login',[IndexController::class,'login'])->name('login');
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 Route::get('/examples/pace',[IndexController::class,'pace'])->name('pace');
 Route::get('/examples/profile',[IndexController::class,'profile'])->name('profile');
 Route::get('/examples/project-add',[IndexController::class,'projectAdd'])->name('project-add');
@@ -205,7 +190,6 @@ Route::get('/kanban',[IndexController::class,'kanban'])->name('kanban');
 Route::get('/starter',[IndexController::class,'starter'])->name('starter');
 Route::get('/widgets',[IndexController::class,'widgets'])->name('widgets');
 
-<<<<<<< HEAD
 Route::get('/forms/post',[IndexController::class,'post'])->name('admin.tag');
 // Route::get('/tables/userDashboard',[IndexController::class,'userDashboard'])->name('userDasboard');
 // Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('to-do');
@@ -213,7 +197,5 @@ Route::get('/forms/post',[IndexController::class,'post'])->name('admin.tag');
 // Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 
 
-=======
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 
 

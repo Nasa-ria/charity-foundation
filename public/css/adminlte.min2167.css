@@ -13115,7 +13115,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 }
 
 .content-wrapper {
-    background-color: #f4f6f9
+    /* background-color: #f4f6f9 */
 }
 
 .content-wrapper>.content {
@@ -13684,12 +13684,12 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 .dark-mode .content-wrapper {
-    background-color: #454d55;
+    /* background-color: #454d55; */
     color: #fff
 }
 
 .dark-mode .content-wrapper .content-header {
-    color: #fff
+    /* color: #fff */
 }
 
 .main-header {
@@ -47639,7 +47639,7 @@ blockquote.quote-gray-dark h6 {
 }
 
 .dark-mode .tab-custom-content {
-    border-color: #6c757d
+    /* border-color: #6c757d */
 }
 
 .dark-mode .list-group-item {

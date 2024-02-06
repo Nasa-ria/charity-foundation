@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Event;
 use App\Models\Image;
 use Illuminate\Http\Request;
@@ -45,7 +46,7 @@ class EventController extends Controller
         $event = Event::create([
             'title' => $validated['title'],
             'description' => $validated['description'],
-            'date' => $validated['date'],
+            'date' => Carbon::now()->format('Y-m-d H:i:s'),  
             'location' => $validated['location'],
             'status' =>$validated['status'],
         ]);
