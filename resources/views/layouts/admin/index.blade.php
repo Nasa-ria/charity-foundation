@@ -54,10 +54,22 @@
 
 <link rel="stylesheet" href="{{asset('plugins/dropzone/min/dropzone.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/login.css')}}">
+<<<<<<< HEAD
+<link rel="stylesheet" href="{{asset('css/eventTag.css')}}">
+=======
 {{-- <link rel="stylesheet" href="{{asset('css/event.css')}}"> --}}
 
+>>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 
-{{-- <link href="path/to/select2.min.css" rel="stylesheet" /> --}}
+{{-- select2 --}}
+{{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"> --}}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- select2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+<!-- select2-bootstrap4-theme -->
+{{-- <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet"> <!-- for live demo page --> --}}
+{{-- <link href="select2-bootstrap4.css" rel="stylesheet"> --}}
 
     <script nonce="29ff855d-03c1-4760-8ff8-60f4b8817eff">
         (function(w, d) {
