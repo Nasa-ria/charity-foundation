@@ -226,7 +226,7 @@ class IndexController extends Controller
         return view('pages.widgets');
     }
     public function  post(){
-        return view('pages.forms.post');
+        return view('pages.admin.pages.forms.tag');
     }
     public function  userDashboard(){
         return view('pages.tables.userDashboard');
@@ -252,5 +252,10 @@ class IndexController extends Controller
         return view('pages.admin.pages.forms.event');
     }
     
+
+       
+    // public function  post(){
+    //     return view('pages.admin.pages.forms.tag');
+    // }
     
 }

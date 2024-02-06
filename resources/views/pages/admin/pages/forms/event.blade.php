@@ -8,7 +8,7 @@
                     <div class="col-xs-12 col-md-offset-1 col-md-10">
                         {{-- <div class="panel panel-default"> --}}
                             <div class="panel-heading panel-title">
-                                <h1 class="s3-fs-xs-3 text-center mt-5">CAUSE FORM</h1>
+                                <h1 class="s3-fs-xs-3 text-center mt-5">EVENT FORM</h1>
                                 {{-- <h6>Department of Nutrition, Food and Exercise Sciences</h6> --}}
                             </div>
                             <div class="panel-body">
@@ -20,28 +20,18 @@
                                         <input type="text" class="form-control" name="title" placeholder="title" required>
                                     </div>
 
-                                    {{-- <div class="form-group">
-                                        <label for="goal">Goal</label>
-                                        <input type="number" class="form-control" name="goal" placeholder="goal" required>
-                                    </div> --}}
-
-                                    {{-- <div class="form-group">
-                                        <label for="rised">Rised</label>
-                                        <input type="number" class="form-control" name="rised" placeholder=" amount rised" required>
-                                    </div> --}}
-
                                     <div class="form-group">
                                         <label for="details">details</label>
                                         <textarea id="details" class="form-control" name="details" rows="4" cols="50" style="width: 58em" required></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="event_mission">event mission </label>
-                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="Reward 1">
-                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
-                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
-                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
-                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
-                                    <input type="text" id="mission_rewards" name="event_mission[]" placeholder="event mission">
+                                        <label for="event_mission">event mission </label><br>
+                                    <input type="text"   class="form-control" id="mission_rewards" name="event_mission[]" placeholder="Reward 1" style="margin-bottom:0.6em"><br>
+                                    <input type="text"  class="form-control" id="mission_rewards" name="event_mission[]" placeholder="event mission" style="margin-bottom: 0.6em"><br>
+                                    <input type="text" class="form-control" id="mission_rewards" name="event_mission[]" placeholder="event mission" style="margin-bottom: 0.6em"><br>
+                                    <input type="text"  class="form-control" id="mission_rewards" name="event_mission[]" placeholder="event mission" style="margin-bottom:0.6em"><br>
+                                    <input type="text" class="form-control" id="mission_rewards" name="event_mission[]" placeholder="event mission" style="margin-bottom: 0.6em"><br>
+                                    <input type="text" class="form-control" id="mission_rewards" name="event_mission[]" placeholder="event mission"><br>
                                     
 
                                     <div class="form-group">
@@ -97,42 +87,42 @@
             document.getElementById('myForm').submit(); // Submit the form
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-    const tagInput = document.getElementById('tag-input');
-    const tagList = document.getElementById('tag-list');
+    //     document.addEventListener('DOMContentLoaded', function() {
+    // const tagInput = document.getElementById('tag-input');
+    // const tagList = document.getElementById('tag-list');
 
-    tagInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter' || event.key === ',') {
-            event.preventDefault();
-            const tagValue = tagInput.value.trim();
-            if (tagValue !== '') {
-                addTag(tagValue);
-                tagInput.value = '';
-            }
-        }
-    });
+    // tagInput.addEventListener('keydown', function(event) {
+    //     if (event.key === 'Enter' || event.key === ',') {
+    //         event.preventDefault();
+    //         const tagValue = tagInput.value.trim();
+    //         if (tagValue !== '') {
+    //             addTag(tagValue);
+    //             tagInput.value = '';
+    //         }
+    //     }
+    // });
 
-    function addTag(tagValue) {
-        const tag = document.createElement('div');
-        tag.classList.add('tag');
-        tag.textContent = tagValue;
-        tag.addEventListener('click', function() {
-            tag.remove();
-        });
-        tagList.appendChild(tag);
-    }
-});
+//     function addTag(tagValue) {
+//         const tag = document.createElement('div');
+//         tag.classList.add('tag');
+//         tag.textContent = tagValue;
+//         tag.addEventListener('click', function() {
+//             tag.remove();
+//         });
+//         tagList.appendChild(tag);
+//     }
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-    new Tagify(document.querySelector('input[name=tags]'), {
-        enforceWhitelist: true,
-        whitelist: ['HTML', 'CSS', 'JavaScript'], // Example whitelist of skills/tags
-        dropdown: {
-            enabled: 1,
-            maxItems: 5
-        }
-    });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     new Tagify(document.querySelector('input[name=tags]'), {
+//         enforceWhitelist: true,
+//         whitelist: ['HTML', 'CSS', 'JavaScript'], // Example whitelist of skills/tags
+//         dropdown: {
+//             enabled: 1,
+//             maxItems: 5
+//         }
+//     });
+// });
 
     function initMap() {
       // Initialize the map
@@ -148,6 +138,12 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'Marker Title'
       });
     }
+
+    $(document).ready(function() {
+    $('.select2').select2({
+    closeOnSelect: false
+});
+});
   </script>
   
 

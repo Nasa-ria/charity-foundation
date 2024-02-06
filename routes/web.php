@@ -109,7 +109,7 @@ Route::get('/admin',[IndexController::class,'index'])->name('index');
 
 
 
-Route::get('/',[IndexController::class,'index'])->name('index');
+// Route::get('/',[IndexController::class,'index'])->name('index');
 Route::get('/charts/charjs',[IndexController::class,'chartjs'])->name('chartjs');
 Route::get('/charts/flot',[IndexController::class,'flot'])->name('flot');
 Route::get('/charts/inline',[IndexController::class,'inline'])->name('inline');
@@ -181,10 +181,10 @@ Route::get('/kanban',[IndexController::class,'kanban'])->name('kanban');
 Route::get('/starter',[IndexController::class,'starter'])->name('starter');
 Route::get('/widgets',[IndexController::class,'widgets'])->name('widgets');
 
-Route::get('/forms/post',[IndexController::class,'post'])->name('post');
-Route::get('/tables/userDashboard',[IndexController::class,'userDashboard'])->name('userDasboard');
-Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('to-do');
-Route::get('/form/formlist',[IndexController::class,'formlist'])->name('formlist');
+Route::get('/forms/post',[IndexController::class,'post'])->name('admin.tag');
+// Route::get('/tables/userDashboard',[IndexController::class,'userDashboard'])->name('userDasboard');
+// Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('to-do');
+// Route::get('/form/formlist',[IndexController::class,'formlist'])->name('formlist');
 // Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 
 
