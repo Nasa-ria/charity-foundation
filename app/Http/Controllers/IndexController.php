@@ -229,13 +229,16 @@ class IndexController extends Controller
         return view('pages.admin.pages.forms.tag');
     }
     public function  userDashboard(){
-        return view('pages.tables.userDashboard');
+        return view('pages.admin.pages.tables.userDashboard');
     }
     
     public function  to_do(){
-        return view('pages.To-Do.todo');
+        return view('pages.admin.pages.To-Do.todo');
     }
     
+    public function  to_doform(){
+        return view('pages.admin.pages.To-do.taskForm');
+    }
        
     public function  formlist(){
         return view('pages.admin.pages.forms.formlist');
@@ -254,8 +257,6 @@ class IndexController extends Controller
     
 
        
-    // public function  post(){
-    //     return view('pages.admin.pages.forms.tag');
-    // }
+ 
     
 }

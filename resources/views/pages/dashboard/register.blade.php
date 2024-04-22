@@ -10,7 +10,7 @@
                     <div class="tp-accountInfo">
                         <div class="tp-accountInfoHeader">
                             {{-- <a href="#"><img src="assets/images/logo.png" alt=""></a> --}}
-                            <a class="tp-accountBtn" href="login.html">
+                            <a class="tp-accountBtn" href="{{route('user.login')}}">
                                 <span class="">Log in</span>
                             </a>
                         </div>
@@ -65,7 +65,7 @@
                             <li><button class="twitter" tabindex="0" type="button"><span><i class="fa fa-twitter"></i></span></button></li>
                             <li><button class="linkedin" tabindex="0" type="button"><span><i class="fa fa-linkedin"></i></span></button></li>
                         </ul>
-                        <p class="subText"> Have an account?  <a href="{{route('login')}}">Login</a></p>
+                        <p class="subText"> Have an account?  <a href="{{route('user.login')}}">Login</a></p>
                     </div>
                 </form>
             </div>

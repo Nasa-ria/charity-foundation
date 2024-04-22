@@ -2,7 +2,7 @@
 @section('content')
 
         <div class="content-wrapper">
-            <section class="content"> 
+            <section class="content -ml-6 "> 
             <div class="card mt-4">
                 <div class="card-header">
                     <h3 class="card-title"> POST</h3>

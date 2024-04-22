@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.admin.index')
 @section('content')
 <div class="content-wrapper">
 <div class="card">
@@ -8,8 +8,8 @@
             To Do List
         </h3>
         <div class="card-footer clearfix">
-            <button type="button" class="btn btn-primary float-right"><i
-                    class="fas fa-plus"></i> Add item</button>
+            <a class="theme-btn  float-right" href="{{route('admin.to-do-form')}}"><i
+                    class="fas fa-plus"></i>add</a></td></a>
             </div>
         <div class="card-tools">
             <ul class="pagination pagination-sm">

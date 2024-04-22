@@ -7,12 +7,12 @@
                 <div class="row">
                     <div class="col-lg-12">
                             {{-- <form  class="signin-form" method="POST" action="{{ route('signup') }}" > --}}
-                                <form class="tp-accountWrapper" method="POST" action="{{ route('signIn') }}">
+                                <form class="tp-accountWrapper" method="POST" action="{{ route('user.login') }}">
                                     @csrf
                                 <div class="tp-accountInfo">
                                     <div class="tp-accountInfoHeader">
                                         {{-- <a href="#"><img src="{{asset('images/logo.png')}}" alt=""></a> --}}
-                                        <a class="tp-accountBtn" href="register.html">
+                                        <a class="tp-accountBtn"  href="{{route('user.register')}}">
                                             <span class="">Create Account</span>
                                         </a>
                                     </div>
