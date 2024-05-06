@@ -47,24 +47,23 @@
                                     
 
                                    <label for="tags">Tags</label>
-                                        <select id="multiple" class="js-states form-control" multiple  name="tags[]">
-                                            <option>Help</option>
-                                            <option>Donations</option>
-                                            <option>Help</option>
-                                            <option>Helping Hand</option>
-                                            <option>Poor People</option>
-                                            <option>Video</option>
-                                            <option>Charity</option>
+                                     <select id="multiple"     class="js-states form-control"  multiple  name="tags[]" onchange="setTag()">
+                                            <option  value = help>Help</option>
+                                            <option value = help >Donations</option>   
+                                            <option value = help >Helping Hand</option>
+                                            <option value = help >Poor People</option>
+                                            <option value = help >Video</option>
+                                            <option value = help >Charity</option>
                                         </select>
 
 
-
+            
 
                                     </div>
 
 
 
-                            </form>
+                            {{-- </form> --}}
 
 
 
@@ -77,19 +76,19 @@
 
     </section>
     </div>
-    <div class=" mb-5">
-        <input type="hidden" id="formStatus" name="status" value="{{ 'submitted' }}">
 
-        <div class="text-center mt-5">
-            <button type="button" onclick="saveDraft()" class="btn btn-primary">Save
-                Draft</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+        <input type="hidden" id="formStatus" name="status" value="{{'draft'}}">
+        <div class="mb-5">
+            <div class="text-center mt-5">
+                <button type="button" onclick=saveDraft() class="btn btn-primary">Save Draft</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </div>
+    
 
-
-    </div>
-
-
+    </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -110,13 +109,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
-    <script>
-        function saveDraft() {
-            document.getElementById('formStatus').value = 'draft'; // Change the value of the hidden input field to "draft"
-            document.getElementById('myForm').submit(); // Submit the form
-        }
-    </script>
-
+<script>
+    function saveDraft() {
+        document.getElementById('formStatus').value = 'draft'; // Change the value of the hidden input field to "draft"
+        document.getElementById('myForm').submit(); // Submit the form
+    }
+    
+    // Ensure the status is set to "submitted" before form submission
+    document.getElementById('myForm').addEventListener('submit', function() {
+        document.getElementById('formStatus').value = 'submitted';
+    });
+</script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Select2 -->
@@ -127,5 +130,15 @@
             allowClear: true,
             tags: true
         });
+    //     $('.selectedTags').on('change', function() {
+    //     var selectedTags = $('.selectedTags').val();
+    //     $('.selectedTags').val(selectedTags);
+    // });
+  var tags
+    function setTag(){
+  tags = document.getElementById('multiple').value;
+  alert(month);
+}
+
     </script>
 @endsection

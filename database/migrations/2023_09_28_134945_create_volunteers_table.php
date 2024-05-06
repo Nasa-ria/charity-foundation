@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('subject');
             $table->string('gender');
             $table->string('resume');
-            $table->string('case_description');
             $table->timestamps();
         });
     }

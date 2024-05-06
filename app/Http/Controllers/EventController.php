@@ -39,7 +39,8 @@ class EventController extends Controller
             'loaction' => 'required',
             'image' => 'required', 
             'date' => 'required', 
-            'description' => 'required', 
+            'event_details' => 'event_details', 
+            'event_mission'=>'event_mission',  
             'status' => 'required', 
         ]);
         $event = Event::create([
@@ -96,7 +97,8 @@ class EventController extends Controller
             'loaction' => 'required',
             'image' => 'required', 
             'date' => 'required', 
-            'description' => 'required', 
+            'event_details' => 'event_details', 
+            'event_mission'=>'event_mission',
             'status' => 'required', 
         ]);
             // Find the blog post you want to update

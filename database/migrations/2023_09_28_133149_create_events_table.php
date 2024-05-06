@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('location');
             $table->date('date');
             $table->longText('event_details');
+            $table->longText('event_mission');
             $table->string('status');
             $table->timestamps();
         });
