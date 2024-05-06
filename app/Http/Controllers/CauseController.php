@@ -38,17 +38,37 @@ class CauseController extends Controller
      */
     public function store(CauseRequest $request)
     {
-        try {
-            $cause=Cause::create($request->validated());
-            $this->causeClass->handleUploadedImage($request);
-
-            $this->causeClass->handleTags($request);
-    
-            return response()->json([
-                'message' => 'Form submitted successfully',
-                'data' => $cause,
-                'image' => $image ?? null // Return image only if uploaded
+        try{
+            $validated = $request->validate([
+                'title' => 'required|string',
+                'details' => 'required',
+                'goal' => 'required',
+                'rised' => 'required',
+                'image' => 'required', 
+                'status' => 'required', 
+                'tags' => 'required', 
             ]);
+            $cause = Cause::create([
+                'title' => $validated['title'],
+                'details' => $validated['details'],
+                'rised' => $validated['rised'],
+                'goal' => $validated['goal'],
+                'status' =>$validated['status'],
+                'tags' =>$validated['tags'],
+            ]);
+            if ($request->hasFile('image')) {
+                $imagePath = $request->file('image')->store('images');// Store the image in the storage/app/images directory
+        
+                // Create an image record for the blog post
+                $image = new Image([
+                    'url' => $imagePath, // Assuming 'url' column in the image table stores the image path
+                ]);
+                // Associate the image with the blog post using polymorphic relationship
+                $cause->images()->save($image);
+            }
+            return response()->json(['message' => 'Form submitted successfully',
+            'data' => $cause,$image
+                   ]);
         } catch (\Exception $e) {
             // Log and return error response
             Log::error('Form submission failed: ' . $e->getMessage());

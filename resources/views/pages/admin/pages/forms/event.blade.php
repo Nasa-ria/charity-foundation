@@ -52,71 +52,69 @@
                                     <input type="text" id="mission_rewards" name="event_mission[]"
                                         placeholder="event mission">
 
-                                </div>
-                                <div class="form-group">
-                                    <label for="details">Map </label>
-                                    <div id="map" name="location" style="height: 400px;"></div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Minimal</label>
-                                            <select class="form-control select2 select2-hidden-accessible"
-                                                style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                <option selected="selected">Alabama</option>
-                                                <option>Alaska</option>
-                                                <option>California</option>
-                                                <option>Delaware</option>
-                                                <option>Tennessee</option>
-                                                <option>Texas</option>
-                                                <option>Washington</option>
-                                            </select>
-                                        </div> <!-- /.form-group -->
-                                        <div class="form-group">
-                                            <label>Disabled</label>
-                                            <select class="form-control select2 select2-hidden-accessible" disabled=""
-                                                style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                <option selected="selected">Alabama</option>
-                                                <option>Alaska</option>
-                                                <option>California</option>
-                                                <option>Delaware</option>
-                                                <option>Tennessee</option>
-                                                <option>Texas</option>
-                                                <option>Washington</option>
-                                            </select>
-                                        </div> <!-- /.form-group -->
-                                    </div> <!-- /.col -->
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Multiple</label>
-                                            <select class="form-control select2 select2-hidden-accessible" multiple=""
-                                                data-placeholder="Select a State" style="width: 100%;" tabindex="-1"
-                                                aria-hidden="true">
-                                                <option>Alabama</option>
-                                                <option>Alaska</option>
-                                                <option>California</option>
-                                                <option>Delaware</option>
-                                                <option>Tennessee</option>
-                                                <option>Texas</option>
-                                                <option>Washington</option>
-                                            </select>
-                                        </div> <!-- /.form-group -->
-                                        <div class="form-group">
-                                            <label>Disabled Result</label>
-                                            <select class="form-control select2 select2-hidden-accessible"
-                                                style="width: 100%;" tabindex="-1" aria-hidden="true">
-                                                <option selected="selected">Alabama</option>
-                                                <option>Alaska</option>
-                                                <option disabled="disabled">California (disabled)</option>
-                                                <option>Delaware</option>
-                                                <option>Tennessee</option>
-                                                <option>Texas</option>
-                                                <option>Washington</option>
-                                            </select>
-                                        </div> <!-- /.form-group -->
-                                    </div> <!-- /.col -->
-                                </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="details">Map </label>
+                                        <div id="map" name="location" style="height: 400px;"></div>
+                                    </div>
+                                
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group"> 
+                                                <label>Minimal</label> 
+                                                <select class="form-control select2 select2-hidden-accessible"
+                                                    style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <option selected="selected">Alabama</option>
+                                                    <option>Alaska</option>
+                                                    <option>California</option>
+                                                    <option>Delaware</option>
+                                                    <option>Tennessee</option>
+                                                    <option>Texas</option>
+                                                    <option>Washington</option>
+                                                </select> 
+                                            </div> <!-- /.form-group -->
+                                            <div class="form-group"> 
+                                                <label>Disabled</label>
+                                                 <select class="form-control select2 select2-hidden-accessible" disabled=""
+                                                    style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <option selected="selected">Alabama</option>
+                                                    <option>Alaska</option>
+                                                    <option>California</option>
+                                                    <option>Delaware</option>
+                                                    <option>Tennessee</option>
+                                                    <option>Texas</option>
+                                                    <option>Washington</option>
+                                                </select> 
+                                            </div> <!-- /.form-group -->
+                                        </div> <!-- /.col -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                 <label>Multiple</label> 
+                                                 <select class="form-control select2 select2-hidden-accessible" multiple=""
+                                                    data-placeholder="Select a State" style="width: 100%;" tabindex="-1"
+                                                    aria-hidden="true">
+                                                    <option>Alabama</option>
+                                                    <option>Alaska</option>
+                                                    <option>California</option>
+                                                    <option>Delaware</option>
+                                                    <option>Tennessee</option>
+                                                    <option>Texas</option>
+                                                    <option>Washington</option>
+                                                </select> </div> <!-- /.form-group -->
+                                            <div class="form-group"> 
+                                                <label>Disabled Result</label> 
+                                                <select class="form-control select2 select2-hidden-accessible"
+                                                    style="width: 100%;" tabindex="-1" aria-hidden="true">
+                                                    <option selected="selected">Alabama</option>
+                                                    <option>Alaska</option>
+                                                    <option disabled="disabled">California (disabled)</option>
+                                                    <option>Delaware</option>
+                                                    <option>Tennessee</option>
+                                                    <option>Texas</option>
+                                                    <option>Washington</option>
+                                                </select> </div> <!-- /.form-group -->
+                                        </div> <!-- /.col -->
+                                    </div>
 
 
 

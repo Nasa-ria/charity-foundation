@@ -47,6 +47,9 @@ Route::get('/admin',[DashboardController::class,'admin'])->name('admin');
 Route::get('/admin/blogform',[DashboardController::class,'blogform'])->name('admin-blogform');
 Route::get('/admin/form',[DashboardController::class,'form'])->name('admin-forms');
 
+=======
+Route::get('/google/callback', [DashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback'); 
+>>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 Route::get('/register',[DashboardController::class,'register'])->name('user.register');
 Route::get('/login',[DashboardController::class,'login'])->name('user.login'); 
 Route::get('/donate',[DashboardController::class,'donate'])->name('user.donate');
@@ -192,7 +195,15 @@ Route::get('/kanban',[IndexController::class,'kanban'])->name('kanban');
 Route::get('/starter',[IndexController::class,'starter'])->name('starter');
 Route::get('/widgets',[IndexController::class,'widgets'])->name('widgets');
 
+<<<<<<< HEAD
+Route::get('/forms/post',[IndexController::class,'post'])->name('admin.tag');
+// Route::get('/tables/userDashboard',[IndexController::class,'userDashboard'])->name('userDasboard');
+// Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('to-do');
+// Route::get('/form/formlist',[IndexController::class,'formlist'])->name('formlist');
+// Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 
 
+=======
+>>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 
 

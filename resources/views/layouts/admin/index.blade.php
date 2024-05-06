@@ -54,17 +54,88 @@
 
 <link rel="stylesheet" href="{{asset('plugins/dropzone/min/dropzone.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/login.css')}}">
-{{-- <link rel="stylesheet" href="{{asset('css/eventTag.css')}}"> --}}
-<link rel="stylesheet" href="{{asset('css/event.css')}}">
+<<<<<<< HEAD
+<link rel="stylesheet" href="{{asset('css/eventTag.css')}}">
+=======
+{{-- <link rel="stylesheet" href="{{asset('css/event.css')}}"> --}}
 
+>>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
+
+{{-- select2 --}}
+{{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"> --}}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- select2 -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
 <!-- select2-bootstrap4-theme -->
-<link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet"> <!-- for live demo page -->
-<link href="{{asset('css/Select2-bootstrap4.css')}}" rel="stylesheet">
+{{-- <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet"> <!-- for live demo page --> --}}
+{{-- <link href="select2-bootstrap4.css" rel="stylesheet"> --}}
 
+    <script nonce="29ff855d-03c1-4760-8ff8-60f4b8817eff">
+        (function(w, d) {
+            ! function(dp, dq, dr, ds) {
+                dp[dr] = dp[dr] || {};
+                dp[dr].executed = [];
+                dp.zaraz = {
+                    deferred: [],
+                    listeners: []
+                };
+                dp.zaraz.q = [];
+                dp.zaraz._f = function(dt) {
+                    return async function() {
+                        var du = Array.prototype.slice.call(arguments);
+                        dp.zaraz.q.push({
+                            m: dt,
+                            a: du
+                        })
+                    }
+                };
+                for (const dv of ["track", "set", "debug"]) dp.zaraz[dv] = dp.zaraz._f(dv);
+                dp.zaraz.init = () => {
+                    var dw = dq.getElementsByTagName(ds)[0],
+                        dx = dq.createElement(ds),
+                        dy = dq.getElementsByTagName("title")[0];
+                    dy && (dp[dr].t = dq.getElementsByTagName("title")[0].text);
+                    dp[dr].x = Math.random();
+                    dp[dr].w = dp.screen.width;
+                    dp[dr].h = dp.screen.height;
+                    dp[dr].j = dp.innerHeight;
+                    dp[dr].e = dp.innerWidth;
+                    dp[dr].l = dp.location.href;
+                    dp[dr].r = dq.referrer;
+                    dp[dr].k = dp.screen.colorDepth;
+                    dp[dr].n = dq.characterSet;
+                    dp[dr].o = (new Date).getTimezoneOffset();
+                    if (dp.dataLayer)
+                        for (const dC of Object.entries(Object.entries(dataLayer).reduce(((dD, dE) => ({
+                                ...dD[1],
+                                ...dE[1]
+                            })), {}))) zaraz.set(dC[0], dC[1], {
+                            scope: "page"
+                        });
+                    dp[dr].q = [];
+                    for (; dp.zaraz.q.length;) {
+                        const dF = dp.zaraz.q.shift();
+                        dp[dr].q.push(dF)
+                    }
+                    dx.defer = !0;
+                    for (const dG of [localStorage, sessionStorage]) Object.keys(dG || {}).filter((dI => dI
+                        .startsWith("_zaraz_"))).forEach((dH => {
+                        try {
+                            dp[dr]["z_" + dH.slice(7)] = JSON.parse(dG.getItem(dH))
+                        } catch {
+                            dp[dr]["z_" + dH.slice(7)] = dG.getItem(dH)
+                        }
+                    }));
+                    dx.referrerPolicy = "origin";
+                    dx.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(dp[dr])));
+                    dw.parentNode.insertBefore(dx, dw)
+                };
+                ["complete", "interactive"].includes(dq.readyState) ? zaraz.init() : dp.addEventListener(
+                    "DOMContentLoaded", zaraz.init)
+            }(w, d, "zarazData", "script");
+        })(window, document);
+    </script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
