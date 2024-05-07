@@ -16,26 +16,32 @@ class Cause extends Model
         'status',
         'rised',
         'goal',
+        'tags'
     ];
     
     protected $casts = [
         'tags' => 'array',
     ];
 
-    public function getTagsAttribute($value)
-    {
-        return json_decode($value, true);
-    }
+    // public function getTagsAttribute($value)
+    // {
+    //     return json_decode($value, true);
+    // }
 
-    // Define accessor for tags field
-    public function setTagsAttribute($value)
-    {
-        $this->attributes['tags'] = json_encode($value);
-    }
+    // // Define accessor for tags field
+    // public function setTagsAttribute($value)
+    // {
+    //     $this->attributes['tags'] = json_encode($value);
+    // }
 
 
     public function images(): MorphMany
     {
         return $this->morphMany(Image::class, 'imageable');
+    }
+
+    public function tags(): MorphMany
+    {
+        return $this->morphMany(Tag::class, 'taggable');
     }
 }

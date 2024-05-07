@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CauseController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\DashboardController;
 
@@ -47,9 +48,9 @@ Route::get('/admin',[DashboardController::class,'admin'])->name('admin');
 Route::get('/admin/blogform',[DashboardController::class,'blogform'])->name('admin-blogform');
 Route::get('/admin/form',[DashboardController::class,'form'])->name('admin-forms');
 
-=======
+
 Route::get('/google/callback', [DashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback'); 
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
+
 Route::get('/register',[DashboardController::class,'register'])->name('user.register');
 Route::get('/login',[DashboardController::class,'login'])->name('user.login'); 
 Route::get('/donate',[DashboardController::class,'donate'])->name('user.donate');
@@ -97,7 +98,10 @@ Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('admin.to-do')
 Route::get('/To-Do/to-do-form',[IndexController::class,'to_doform'])->name('admin.to-do-form');
 Route::get('/form/formlist',[IndexController::class,'formlist'])->name('admin.formlist');
 Route::get('/form/cause',[IndexController::class,'cause'])->name('admin.cause');
+Route::get('/form/event',[IndexController::class,'event'])->name('admin.event');
 Route::post('/cause/store',[CauseController::class,'store'])->name('admin.cause.store');
+Route::post('/event/store',[EventController::class,'store'])->name('admin.event.store');
+
 Route::get('/admin/login',[IndexController::class,'login'])->name('admin.login');
 Route::post('/user/login',[UserController::class,'signIn'])->name('user.login');
 Route::post('/admin/register',[UserController::class,'register'])->name('admin.register');
@@ -195,7 +199,6 @@ Route::get('/kanban',[IndexController::class,'kanban'])->name('kanban');
 Route::get('/starter',[IndexController::class,'starter'])->name('starter');
 Route::get('/widgets',[IndexController::class,'widgets'])->name('widgets');
 
-<<<<<<< HEAD
 Route::get('/forms/post',[IndexController::class,'post'])->name('admin.tag');
 // Route::get('/tables/userDashboard',[IndexController::class,'userDashboard'])->name('userDasboard');
 // Route::get('/To-Do/to-do',[IndexController::class,'to_do'])->name('to-do');
@@ -203,7 +206,5 @@ Route::get('/forms/post',[IndexController::class,'post'])->name('admin.tag');
 // Route::get('/form/cause',[IndexController::class,'cause'])->name('cause');
 
 
-=======
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 
 

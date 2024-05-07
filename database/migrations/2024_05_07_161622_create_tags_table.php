@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('location');
-            $table->date('date');
-            $table->longText('event_details');
-            $table->longText('event_mission');
-            $table->json('mission_bullets');
-            $table->string('status');
+            $table->unsignedBigInteger('tag_id')->nullable();
+            $table->unsignedBigInteger('taggable_id')->nullable();
+            $table->string('taggable_type')->nullable();
+            $table->json('tags')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('tags');
     }
 };

@@ -17,7 +17,8 @@ class Blog extends Model
         'content',
         'likes',
         'status',
-        'video'
+        'video',
+        'tags'
     ];
     protected $casts = [
         'tags' => 'json',

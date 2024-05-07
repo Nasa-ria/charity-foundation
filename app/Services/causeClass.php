@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use App\Models\Cause;
 use App\Models\Image;
 use App\Http\Requests\CauseRequest;
 
@@ -36,4 +37,3 @@ public function handleTags($request){
 
 }
 
-}

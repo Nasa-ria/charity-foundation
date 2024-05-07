@@ -31,4 +31,5 @@ Route::resource('task', TaskController::class);
 Route::post('/updat-blog',[BlogController::class,'updateBlog'])->name('updateBlog');
 Route::post('/register',[UserController::class,'register'])->name('register');
 Route::post('/signin',[UserController::class,'signin'])->name('signin');
-Route::post('/cause/store',[CauseController::class,'store'])->name('cause.store');
+
+Route::post('/cause/store',[CauseController::class,'store'])->name('admin.cause.store');

@@ -11,7 +11,7 @@
                             {{-- <h6>Department of Nutrition, Food and Exercise Sciences</h6> --}}
                         </div>
                         <div class="panel-body">
-                            <form id="myForm" method="POST" action="{{ route('cause.store') }}"
+                            <form id="myForm" method="POST" action="{{ route('admin.cause.store') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <p class="mb-3" style="color:#FF0000"> *Please complete all areas:</p>
@@ -31,26 +31,12 @@
                                         required>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="tags">Tags</label>
-                                    <select id="tags" class=" select2" name="tags[]"  multiple placeholder="Choose tags" data-allow-clear="1">
-                                        <option value="Donation">Donation</option>
-                                        <option value="Charity">Charity</option>
-                                        <option value="Event">Event</option>                                        
-                                    </select>
-                                    {{-- <button id="addTagButton" type="button">Add Tag</button>
-                                    <ul id="tagsList"></ul>
-                                    <button type="submit">Submit</button>
-                                </div> --}}
+                              
                                 <div class="form-group">
                                     <label for="details">Details</label>
                                     <textarea id="details" class="form-control" name="details" rows="4" cols="50" style="width: 58em" required></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="details">Tags </label>
-                                    <input type="number" class="form-control" name="tags" placeholder=" amount rised"
-                                        required>
-                                </div>
+                     
 
 
                                 <p>Please upload the following for this application:</p>
@@ -62,12 +48,14 @@
 
                                 <div class="form-group">
                                     <label for="tags">Tags</label>
-                                    <select id="tags" class="form-control select2" multiple>
-                                        <option value="HTML">HTML</option>
-                                        <option value="CSS">CSS</option>
-                                        <option value="JavaScript">JavaScript</option>
-                                        <option value="PHP">PHP</option>
-                                        <option value="MySQL">MySQL</option>
+                                   
+                                    <select id="multiple" class="js-states form-control" multiple  name="tags[]">
+                                        <option>Help</option>
+                                        <option>Donations</option>
+                                        <option>Helping Hand</option>
+                                        <option>Poor People</option>
+                                        <option>Video</option>
+                                        <option>Charity</option>
                                     </select>
                                 </div>
 
@@ -111,14 +99,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.select2').select2({
-            theme: 'bootstrap4',
-            width: '100%'
-        });
-    });
 
+<script>
     function saveDraft() {
         document.getElementById('formStatus').value = 'draft'; // Change the value of the hidden input field to "draft"
         document.getElementById('myForm').submit(); // Submit the form
@@ -134,15 +116,7 @@
             allowClear: true,
             tags: true
         });
-    //     $('.selectedTags').on('change', function() {
-    //     var selectedTags = $('.selectedTags').val();
-    //     $('.selectedTags').val(selectedTags);
-    // });
-  var tags
-    function setTag(){
-  tags = document.getElementById('multiple').value;
-  alert(month);
-}
+ 
 
     </script>
 @endsection
