@@ -676,18 +676,18 @@
                         <p>Form</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{route('UI-general')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Chat</p>
                     </a>
-                </li>
-                <li class="nav-item">
+                </li> --}}
+                {{-- <li class="nav-item">
                     <a href="{{route('UI-general')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Chart</p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="{{route('admin.to-do')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
@@ -700,18 +700,18 @@
                         <p>User Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{route('UI-general')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Employee Dashboard</p>
                     </a>
-                </li>
-                <li class="nav-item">
+                </li> --}}
+                {{-- <li class="nav-item">
                     <a href="{{route('UI-general')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Post</p>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </nav>
 

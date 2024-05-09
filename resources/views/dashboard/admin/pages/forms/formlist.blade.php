@@ -23,7 +23,8 @@
                                 <td>1.</td>
                                 <td>Cause</td>
                            
-                                    <td><a class="theme-btn" href="{{route('admin.cause')}}">add</a></td>
+                                    <td><a class="theme-btn" href="{{route('cause.index')}}">view</a> 
+                                    {{-- <a class="theme-btn" href="{{route('cause.show')}}">edit</a></td> --}}
                             
                                
                             </tr>

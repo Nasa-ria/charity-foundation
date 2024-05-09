@@ -16,12 +16,11 @@ class Cause extends Model
         'status',
         'rised',
         'goal',
-        'tags'
+    
+      
     ];
     
-    protected $casts = [
-        'tags' => 'array',
-    ];
+  
 
     // public function getTagsAttribute($value)
     // {

@@ -54,12 +54,8 @@
 
 <link rel="stylesheet" href="{{asset('plugins/dropzone/min/dropzone.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/login.css')}}">
-<<<<<<< HEAD
-<link rel="stylesheet" href="{{asset('css/eventTag.css')}}">
-=======
 {{-- <link rel="stylesheet" href="{{asset('css/event.css')}}"> --}}
 
->>>>>>> 16df19fb98eef49e78a669f0813c631b4792f738
 
 {{-- select2 --}}
 {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"> --}}
