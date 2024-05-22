@@ -44,7 +44,7 @@
                                 <td>4.</td>
                                 <td>Fix and squish bugs</td>
                              
-                                <td><a class="theme-btn" href="{{route('admin.cause')}}">add</a></td>
+                                <td><a class="theme-btn" href="{{route('cause.index')}}">add</a></td>
                             </tr>
                         </tbody>
                     </table>

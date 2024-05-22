@@ -21,6 +21,7 @@ class CauseResource extends JsonResource
             'status'=>$this->status,
             'rised'=>$this->rised,
             'goal'=>$this->goal,
+            'created_at'=>$this->created_at,
 
         ];
     }

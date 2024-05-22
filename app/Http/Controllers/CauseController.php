@@ -25,7 +25,8 @@ class CauseController extends Controller
     public function index()
     {
         $causes = Cause::all();
-        return new CauseCollection($causes);
+          new CauseCollection($causes);
+        // return view('dashboard.admin.pages.forms.Cause.cause')->with('cause',$causes);
     }
 
     public function draft(){
