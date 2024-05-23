@@ -94,12 +94,8 @@ Route::get('/form/formlist',[AdminDashboardController::class,'formlist'])->name(
 
 Route::get('/forms/post',[AdminDashboardController::class,'post'])->name('admin.post');
 // cause
-// Route::get('/form/cause',[CauseController::class,'show'])->name('admin.cause');
-// Route::get('/form/cause/edit/{id}',[CauseController::class,'Edit'])->name('admin.cause.edit');
-// Route::post('/form/cause/update/{id}',[CauseController::class,'update'])->name('admin.cause.update');
-// Route::get('/cause',[AdminDashboardController::class,'cause'])->name('user.cause');
-// Route::post('form/cause/store',[CauseController::class,'store'])->name('admin.cause.store');
 Route::resource('cause', CauseController::class);
+Route::get('/cause/search',[CauseController::class,'search'])->name('cause-search');
 
 
 Route::get('/tables/userDashboard',[AdminDashboardController::class,'userDashboard'])->name('admin.userDasboard');

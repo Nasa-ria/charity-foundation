@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CauseRequest;
 use App\Models\Cause;
 use Illuminate\Http\Request;
 use App\Services\polymorphicClass;
@@ -25,8 +26,8 @@ class CauseController extends Controller
     public function index()
     {
         $causes = Cause::all();
-          new CauseCollection($causes);
-        // return view('dashboard.admin.pages.forms.Cause.cause')->with('cause',$causes);
+       $causes =    new CauseCollection($causes);
+        return view('dashboard.admin.pages.forms.Cause.cause')->with('causes',$causes );
     }
 
     public function draft(){
@@ -39,19 +40,22 @@ class CauseController extends Controller
      */
     public function create()
     {
-        return view('dashboard.admin.pages.forms.cause');
+        return view('dashboard.admin.pages.forms.Cause.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CauseRequest $request)
     {
-        try{
+        try{  
           
             $cause = Cause::create($request->validated());
-            $this->polymorphicClass->handleUploadedImage($request);
-          $this->polymorphicClass->handleTags($request);
+           $image= $this->polymorphicClass->handleUploadedImage($request);
+         $tags= $this->polymorphicClass->handleTags($request);
+        //  return response()->json([
+        //     'data' => $cause ,$image,$tags
+        // ]);
            return redirect('/form/formlist')->with('success','Post Created Successfully');
                
         } catch (\Exception $e) {
@@ -65,7 +69,8 @@ class CauseController extends Controller
      */
     public function show(string $id)
     {
-        return view('dashboard.admin.pages.forms.edit-cause');
+        $cause = Cause::find($id);
+        return view('dashboard.admin.pages.forms.Cause.edit')->with('cause',$cause);
     }
 
     /**
@@ -74,7 +79,7 @@ class CauseController extends Controller
     public function edit(string $id)
     {
         $cause = Cause::find($id);
-        return view('pages.form.blog')->with('cause',$cause);
+        return view('dashboard.admin.pages.forms.Cause.edit')->with('cause',$cause);
     }
 
     /**
@@ -102,6 +107,27 @@ class CauseController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+     $cause = Cause::find($id);
+     $cause->delete();
+     return back();
     }
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+    
+        $test = Cause::where('title', 'LIKE', '%' . $search . '%')
+                        ->orWhere('status', 'LIKE', '%' . $search . '%')
+                        ->get();
+    
+        if (count($test) > 0) {
+            // return view('search')->withDetails($test)->withQuery($search);
+            return $test;
+        } else {
+            return "null";
+            // return view('search')->withMessage('No Details found. Try to search again!');
+        }
+    }
+
+
+
 }

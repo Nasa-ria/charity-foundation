@@ -14,7 +14,7 @@ public function handleUploadedImage($request){
         $imagePath = $request->file('image')->store('images');
         // Create Image model and associate it with the cause
         $image = new Image(['url' => $imagePath]);
-        // return $image;
+        return $image;
 ;   // ['price' => 99, 'discounted' => 1]
     
 
@@ -24,17 +24,23 @@ public function handleUploadedImage($request){
 public function handleUpdatedImage($request ,$id){
     $cause= Cause::findOrFail($id);
         // Delete the old image if necessary
-        if ($cause->images->count() > 0) {
+        // if ($cause->images->count() > 0) {
+        //     $oldImage = $cause->images->first();
+        //     Storage::delete($oldImage->url);
+        //     $oldImage->delete();
+        // }
+        if ($request->hasFile('image')) {
             $oldImage = $cause->images->first();
             Storage::delete($oldImage->url);
             $oldImage->delete();
-        }
         $imagePath = $request->file('image')->store('images'); // Store the new image in the storage/app/images directory
 
         // Create a new image record for the updated blog post
         $image = new Image([
             'url' => $imagePath,
         ]);
+        return $image;
+    }
         // $image = Image::updateOrCreate(  
         //     ['image' => $image]
         // );   

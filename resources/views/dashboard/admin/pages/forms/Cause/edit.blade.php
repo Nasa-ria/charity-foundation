@@ -15,7 +15,7 @@
                                 enctype="multipart/form-data">
                                 @csrf
                                    @method("PATCH")
-                                <p class="mb-3" style="color:#FF0000"> *Please complete all areas:</p>
+                                {{-- <p class="mb-3" style="color:#FF0000"> *Please complete all areas:</p> --}}
                                 <div class="form-group">
                                     <label for="title">Title</label>
                                     <input type="text" class="form-control" name="title"  value="{{$cause->title}}" placeholder="title" required>
@@ -23,31 +23,43 @@
 
                                 <div class="form-group">
                                     <label for="goal">Goal</label>
-                                    <input type="number" class="form-control" name="goal" value="{{$cause->title}}" placeholder="goal" required>
+                                    <input type="number" class="form-control" name="goal" value="{{$cause->goal}}" placeholder="goal" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="rised">Rised</label>
-                                    <input type="number" class="form-control" name="rised" value="{{$cause->title}}" placeholder=" amount rised"
+                                    <input type="number" class="form-control" name="rised" value="{{$cause->rised}}" placeholder=" amount rised"
                                         required>
                                 </div>
 
                               
                                 <div class="form-group">
                                     <label for="details">Details</label>
-                                    <textarea id="details" class="form-control" name="details" rows="4" cols="50" style="width: 58em" required>{{$cause->title}}"</textarea>
+                                    <textarea id="details" class="form-control" name="details" rows="4" cols="50" style="width: 58em" required>{{$cause->details}}"</textarea>
                                 </div>
                      
 
 
                                 <p>Please upload the following for this application:</p>
 
-                                <div class="form-group  mt-2">
+                                {{-- <div class="form-group  mt-2">
                                     <label for="InputFile1">Image</label>
                                     <input type="file" name="image" required>
-                                </div>
+                                </div> --}}
 
-                            
+                                <div class="d-flex flex-row align-items-center mb-4 ">
+                                    <div class="form-outline flex-fill mb-0">
+                                      <label for="profile">Image</label><br>
+                                      @if ("storage/app/images/{{ $cause->image }}")
+                                      {{-- @dump(asset('storage/app/images/'.$cause->image)) --}}
+                                      <img src="{{ asset('storage/app/images/'.$cause->image) }}"   style="height:100px; width: 200px";>
+                                       <input type="file" class="form-control mt-2" name="profile" >
+                                       @else
+                                       <input type="file" class="form-control" name="profile" >
+                                      @endif
+                                     
+                                    </div>
+                                  </div>
 
 
                                 <hr />
