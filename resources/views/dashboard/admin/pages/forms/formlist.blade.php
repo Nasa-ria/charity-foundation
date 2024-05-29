@@ -32,7 +32,7 @@
                                 <td>2.</td>
                                 <td>Event</td>
                                 
-                                <td><a class="theme-btn" href="{{route('admin.event')}}">add</a></td>
+                                <td><a class="theme-btn" href="{{route('event.create')}}">add</a></td>
                             </tr>
                             <tr>
                                 <td>3.</td>

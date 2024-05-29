@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Image;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
+use App\Services\polymorphicClass;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
@@ -16,20 +18,17 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Password;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Auth\Events\PasswordReset;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class UserController extends Controller
 {
     use HasApiTokens, HasFactory, Notifiable;
     
-    public function signIn(Request $request)
+ 
+    
+    public function signIn(UserRequest $request)
     {
-        
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required',
-        ]);
         $credentials = $request->only('email', 'password');
         if (auth('web')->attempt($credentials)) {
             $user = auth('web')->user();
@@ -47,32 +46,13 @@ class UserController extends Controller
       
     }
 
-    public function register(Request $request)
+    public function register(UserRequest $request)
     {
-        // dd($request->all());
-        try {
-            $validatedData = $request->validate([
-                'name' => 'required|string',
-                'email' => 'required|email|unique:users,email',
-                'password' => 'required|confirmed|min:8', // Example password validation
-                'profile' => 'nullable|image', // Optional profile image validation
-            ]);
-
-            $user = User::create([
-                'name' => $validatedData['name'],
-                'email' => $validatedData['email'],
-                'password' => Hash::make($validatedData['password']),
-            ]);
-
-            // Handle profile image upload
-            if ($request->hasFile('profile')) {
-                $profileImage = $request->file('profile');
-                $profileImagePath = $profileImage->store('profiles', 'public');
-
-                $image = new Image(['url' => $profileImagePath]);
-                $user->images()->save($image);
-            }
-
+        
+    try{
+        $data = $request->validated();
+        $data['password'] = Hash::make($data['password']);
+        $user = User::create($data);
             // return response()->json([
             //     'message' => 'User registered successfully',
             //     'user' => $user,
@@ -91,7 +71,7 @@ class UserController extends Controller
     }
 
 
-    public function redirectToGoogle()
+    public function loginWithgoogle()
     {
         try{
             return Socialite::driver('google')->redirect();
@@ -101,10 +81,10 @@ class UserController extends Controller
         }
       
     }
-    public function loginWithFacebook()
+    public function loginWithfacebook()
     {
         try{
-           $facebook= Socialite::driver('google')->stateless()->redirect();
+           $facebook= Socialite::driver('facebook')->stateless()->redirect();
          
         } catch (\Exception $e) {
             return response()->json(['message' => ' authentication failed: ' . $e->getMessage()]);
@@ -141,7 +121,7 @@ class UserController extends Controller
         }
 
     
-    public function loginWithGoogleCallback(){
+    public function loginWithfaceCallback(){
         $socialUser = Socialite::driver('facebook')->user();
     
         $user = User::where('email', $socialUser->email)->first();
@@ -198,11 +178,10 @@ class UserController extends Controller
     }
 
     public function forget_password (Request $request) {
-      return view('pages.admin.auth.forgot-password');
+        return view('dashboard.user.pages.forgetPassword');
     }
 
-    public function forgetpassword (Request $request) {
-        $request->validate(['email' => 'required|email']);
+    public function forgetpassword (UserRequest $request) {
      
         $status = Password::sendResetLink(
             $request->only('email')

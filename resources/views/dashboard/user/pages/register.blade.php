@@ -61,9 +61,11 @@
                         </div>
                         <h4 class="or"><span>OR</span></h4>
                         <ul class="tp-socialLoginBtn">
-                            <li><button class="facebook" tabindex="0" type="button"><span><i class="fa fa-facebook"></i></span></button></li>
-                            <li><button class="twitter" tabindex="0" type="button"><span><i class="fa fa-twitter"></i></span></button></li>
-                            <li><button class="linkedin" tabindex="0" type="button"><span><i class="fa fa-linkedin"></i></span></button></li>
+                            <a href="{{ url('/login/facebook') }}" class="btn btn-primary">Login with
+                                Facebook</a>
+                            <a href="{{ url('/login/google') }}" class="btn btn-danger">Login with Google</a>
+                            <!-- Add more social media login buttons as needed -->
+
                         </ul>
                         <p class="subText"> Have an account?  <a href="{{route('user.login')}}">Login</a></p>
                     </div>

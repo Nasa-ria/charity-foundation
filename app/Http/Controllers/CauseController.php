@@ -9,6 +9,7 @@ use App\Services\polymorphicClass;
 use Illuminate\Support\Facades\Log;
 use App\Http\Resources\CauseCollection;
 
+
 class CauseController extends Controller
 {
 
@@ -25,9 +26,10 @@ class CauseController extends Controller
      */  
     public function index()
     {
-        $causes = Cause::all();
+           $causes = Cause::latest()->paginate(10);
        $causes =    new CauseCollection($causes);
-        return view('dashboard.admin.pages.forms.Cause.cause')->with('causes',$causes );
+   
+       return view('dashboard.admin.pages.forms.Cause.cause', compact('causes'));
     }
 
     public function draft(){
@@ -56,7 +58,7 @@ class CauseController extends Controller
         //  return response()->json([
         //     'data' => $cause ,$image,$tags
         // ]);
-           return redirect('/form/formlist')->with('success','Post Created Successfully');
+           return redirect('/cause')->with('success','Post Created Successfully');
                
         } catch (\Exception $e) {
             // Log and return error response
@@ -70,7 +72,7 @@ class CauseController extends Controller
     public function show(string $id)
     {
         $cause = Cause::find($id);
-        return view('dashboard.admin.pages.forms.Cause.edit')->with('cause',$cause);
+        return view('dashboard.admin.pages.forms.Cause.show', compact('causes'));
     }
 
     /**
@@ -111,6 +113,8 @@ class CauseController extends Controller
      $cause->delete();
      return back();
     }
+
+
     public function search(Request $request)
     {
         $search = $request->input('search');
@@ -120,11 +124,11 @@ class CauseController extends Controller
                         ->get();
     
         if (count($test) > 0) {
-            // return view('search')->withDetails($test)->withQuery($search);
-            return $test;
+            return view('search')->withDetails($test)->withQuery($search);
+            // return $test;
         } else {
             return "null";
-            // return view('search')->withMessage('No Details found. Try to search again!');
+            return view('search')->withMessage('No Details found. Try to search again!');
         }
     }
 

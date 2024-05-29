@@ -2,17 +2,17 @@
 @section('content')
     <div class="content-wrapper">
         <section class="content">
-           <div class="tp-login-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
+            <div class="tp-login-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
                             {{-- <form  class="signin-form" method="POST" action="{{ route('signup') }}" > --}}
-                                <form class="tp-accountWrapper" method="POST" action="{{ route('user.login') }}">
-                                    @csrf
+                            <form class="signin-form" method="POST" action="{{ route('login-post') }}">
+                                @csrf
                                 <div class="tp-accountInfo">
                                     <div class="tp-accountInfoHeader">
                                         {{-- <a href="#"><img src="{{asset('images/logo.png')}}" alt=""></a> --}}
-                                        <a class="tp-accountBtn"  href="{{route('user.register')}}">
+                                        <a class="tp-accountBtn" href="{{ route('register') }}">
                                             <span class="">Create Account</span>
                                         </a>
                                     </div>
@@ -39,8 +39,8 @@
                                         <div class="col-lg-12 col-md-12 col-12">
                                             <div class="form-group">
                                                 <label>Password</label>
-                                                <input class="pwd6" type="password"  name="password" placeholder="" value="123456"
-                                                    name="pass">
+                                                <input class="pwd6" type="password" name="password" placeholder=""
+                                                    value="123456" name="pass">
                                             </div>
                                             <span class="input-group-btn">
                                                 <button class="btn btn-default reveal6" type="button"><i
@@ -54,7 +54,7 @@
                                                     <label for="fruit4">Remember Me</label>
                                                 </div>
                                                 <div class="forget-btn">
-                                                    <a href="forgot.html">Forgot Password?</a>
+                                                    <a href="{{ route('forgetPassword') }}">Forgot Password?</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,8 +70,9 @@
                                         <!-- Add more social media login buttons as needed -->
 
                                     </ul>
-                                    <p class="subText">Don't have an account?  <li><a href="{{route('user.register')}}">Create free
-                                            account</a></p>
+                                    <p class="subText">Don't have an account? <li><a
+                                                href="{{ route('user.register') }}">Create free
+                                                account</a></p>
                                 </div>
                             </form>
                         </div>

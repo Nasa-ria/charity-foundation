@@ -46,8 +46,6 @@ class UserDashboardController extends Controller
         return view('dashboard.user.pages.volunteer');
     }
 
-    // public function blogform(){
-    //     return view('pages.admin.forms.blog');
-    // }
+    
 
 }

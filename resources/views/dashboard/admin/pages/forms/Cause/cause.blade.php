@@ -1,5 +1,11 @@
+
+
 @extends('layouts.admin.index')
 @section('content')
+
+{{-- @php
+use Illuminate\Pagination\Paginator;
+@endphp --}}
 <div class="content-wrapper">
     <section class="content">
 
@@ -7,24 +13,24 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Causes Table</h3>     
-                    <div class="card-tools" style="margin-left:2em">
-                        
-                    <div class="input-group input-group-sm" >
-                        <form action="{{ route('cause-search') }}" method="GET">
-                            <input type="text" name="table_search"
-                            class="form-control  " placeholder=" by title or status" >
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-default">
-                                <i class="fas fa-search"></i>
-                            </button>
+                <h3 class="card-title" style="margin-top: 1.5em">Causes Table</h3>     
+                    <div class="card-tools" style="margin-top: 1.5em">
+                                  
+                    <form class="form-inline" action="{{ route('cause-search') }}" method="GET" >
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" type="search" placeholder="Search by title or status"
+                                aria-label="Search">
+                            <div class="input-group-append">
+                                <button  type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                              
+                            </div>
                         </div>
-                           
-                        </form>
-                     
-                    </div>
-
-                    <a href="{{route('cause.create')}}"><i class="fas fa-plus">add</i></a>
+                    </form>
+                    <div style="margin-top: 1.5em">
+                        <a href="{{route('cause.create')}}"><i class="fas fa-plus">add</i></a>     
+                        </div>  
                 </div>
             </div>
         <div>
@@ -34,12 +40,6 @@
            
 
                 @foreach ($causes as $cause) 
-                {{-- <h2>Search Results</h2>
-                <ul>
-                    @foreach($results as $result)
-                        <li>{{ $result->title }} - {{ $result->data }} - {{ $result->status }}</li>
-                    @endforeach
-                </ul> --}}
             <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
            
@@ -62,15 +62,17 @@
                             <td><span class="tag tag-success">{{$cause->status}}</span></td>
                             <td>{{$cause->title}}</td>
                             <td>
-                                <a href={{route('cause.show',$cause->id)}}><i class="fas fa-eye"></i></a>  
-                                <a href="{{route('cause.edit',$cause->id)}}"><i class="fas fa-edit"></i></a>
+                                <div class="d-flex flex-row ">
+                                    <button class="btn btn-navbar"><small> <a href={{route('cause.show',$cause->id)}}><i class="fas fa-eye"></i></a>  </small></button>
+                                        <button class="btn btn-navbar"><small> <a href={{route('cause.edit',$cause->id)}}><i class="fas fa-edit" style="color: rgb(245, 208, 43)"></i></a> </small></button>
                                 <span>
                                 <form action={{route('cause.destroy',$cause->id)}} method="POST"> 
                                     @csrf
                                     @method('delete')
-                                    <button><small> <i class="fas fa-trash"></i></small></button>
+                                    <button class="btn btn-navbar" style="color: red"><small> <i class="fas fa-trash"></i></small></button>
                                 </form>
                                 </span>
+                                <div>
                             </td>
                         </tr>
                      
@@ -83,25 +85,34 @@
             </div>
         
         @endforeach
-       
+        {{-- {{ $causes->links() }} --}}
     @else
         <p>no data inputed yet</p>
      
         @endif
-
-        <div class="card-footer clearfix">
-            <ul class="pagination pagination-sm m-0 float-right">
-                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+        {{-- <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {{ $causes->links() }}
             </ul>
-        </div>
+        </nav> --}}
+   
+    
+        
      
         </div>
 
     </div>
+</div>
+<div class="d-flex justify-content-center"> 
+<a href="{{ $causes->previousPageUrl() }}" aria-label="Previous" class="btn btn-primary btn-sm mr-2{{ $causes->onFirstPage() ? ' disabled' : '' }}">
+    Previous
+</a>
+
+<span>Page {{ $causes->currentPage() }} of {{ $causes->lastPage() }}</span>
+
+<a href="{{ $causes->nextPageUrl() }}" aria-label="Next" class="btn btn-primary ml-2{{ $causes->hasMorePages() ? '' : ' disabled' }}">
+    Next
+</a>
 </div>
     </section>
 </div>

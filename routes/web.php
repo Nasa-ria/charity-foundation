@@ -28,15 +28,13 @@ use App\Http\Controllers\AdminDashboardController;
 
 // user
 Route::get('/',[UserDashboardController::class,'index'])->name('home');
-Route::get('/login/facebook', [UserDashboardController::class,'loginWithFacebook'])->name('loginWithFavebook');
-Route::get('/facebook/callback', [UserDashboardController::class,'loginWithFacebookCallback'])->name('loginWithFacebookCallback');  
-Route::get('/login/google', [UserDashboardController::class,'loginWithGoogle'])->name('loginWithGoogle');
-Route::get('/google/callback', [UserDashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback');  
-Route::get('/login',[UserDashboardController::class,'login'])->name('login');
-Route::get('/register',[UserDashboardController::class,'register'])->name('register');
-// Route::get('/donate',[UserDashboardController::class,'donate'])->name('donate');
-// Route::get('/cause',[UserDashboardController::class,'cause'])->name('cause');
-Route::get('/event',[UserDashboardController::class,'event'])->name('event');
+Route::get('/login/facebook', [UserController::class,'loginWithfacebook'])->name('loginWithFacebook');
+Route::post('/facebook/callback', [UserController::class,'loginWithfaceCallback'])->name('loginWithFacebookCallback');  
+Route::get('/login/google', [UserController::class,'loginWithgoogle'])->name('loginWithGoogle');
+Route::post('/google/callback', [UserController::class,'handleGoogleCallback'])->name('loginWithGoogleCallback');  
+Route::post('/forgetpassword',[UserController::class,'forget_password '])->name('post.forgetpassword');
+Route::get('/user/forgetpassword',[UserController::class,'forgetpassword'])->name('forgetPassword');
+Route::get('/user/event',[UserDashboardController::class,'event'])->name('event');
 Route::get('/blog',[UserDashboardController::class,'blog'])->name('blog');
 Route::get('/singleBlog',[UserDashboardController::class,'singleBlog'])->name('singleBlog');
 Route::get('/singleCause',[UserDashboardController::class,'singleCause'])->name('singleCause');
@@ -47,47 +45,12 @@ Route::get('/volunteer',[UserDashboardController::class,'volunteer'])->name('vol
 Route::get('/admin',[UserDashboardController::class,'admin'])->name('admin');
 Route::get('/admin/blogform',[UserDashboardController::class,'blogform'])->name('admin-blogform');
 Route::get('/admin/form',[UserDashboardController::class,'form'])->name('admin-forms');
-
-
-Route::get('/google/callback', [UserDashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback'); 
-
-Route::get('/register',[UserDashboardController::class,'register'])->name('user.register');
-Route::get('/login',[UserDashboardController::class,'login'])->name('user.login'); 
-Route::get('/donate',[UserDashboardController::class,'donate'])->name('user.donate');
-Route::get('/user/cause',[UserDashboardController::class,'cause'])->name('user.cause');
-Route::get('/event',[UserDashboardController::class,'event'])->name('user.event');
-Route::get('/blog',[UserDashboardController::class,'blog'])->name('user.blog');
-Route::get('/singleBlog',[UserDashboardController::class,'singleBlog'])->name('iser.singleBlog');
-Route::get('/singleCause',[UserDashboardController::class,'singleCause'])->name('user.singleCause');
-Route::get('/singleEvent',[UserDashboardController::class,'singleEvent'])->name('user.singleEvent');
-Route::get('/contact',[UserDashboardController::class,'contact'])->name('user.contact');
-Route::get('/about',[UserDashboardController::class,'about'])->name('user.about');
-Route::get('/volunteer',[UserDashboardController::class,'volunteer'])->name('user.volunteer');
-// Route::get('/admin',[UserDashboardController::class,'admin'])->name('admin');
-// Route::get('/user/admin/blogform',[UserDashboardController::class,'blogform'])->name('admin-blogform');
-// Route::get('/user/admin/form',[UserDashboardController::class,'form'])->name('admin-forms');
-
-Route::get('/facebook/callback', [UserDashboardController::class,'loginWithFacebookCallback'])->name('loginWithFacebookCallback');  
-Route::get('/login/google', [UserDashboardController::class,'loginWithGoogle'])->name('loginWithGoogle');
-Route::get('/google/callback', [UserDashboardController::class,'loginWithGoogleCallback'])->name('loginWithGoogleCallback'); 
-Route::get('user/register',[UserDashboardController::class,'register'])->name('user.register');
-Route::get('/user/login',[UserDashboardController::class,'login'])->name('user.login'); 
-// Route::get('/login',[UserDashboardController::class,'login'])->name('login');
-// Route::get('/register',[UserDashboardController::class,'register'])->name('register');
-Route::get('/donate',[AdminDashboardController::class,'donate'])->name('user.donate');
-
-Route::get('/singleBlog',[UserDashboardController::class,'singleBlog'])->name('user.singleBlog');
-Route::get('/singleCause',[UserDashboardController::class,'singleCause'])->name('user.singleCause');
-Route::get('/singleEvent',[UserDashboardController::class,'singleEvent'])->name('user.singleEvent');
-Route::get('/contact',[UserDashboardController::class,'contact'])->name('user.contact');
-Route::get('/about',[UserDashboardController::class,'about'])->name('user.about');
-Route::get('/volunteer',[UserDashboardController::class,'volunteer'])->name('user.volunteer');
-Route::get('/admin',[UserDashboardController::class,'admin'])->name('user.admin');
-Route::get('/admin/blogform',[UserDashboardController::class,'blogform'])->name('');
-
-// Route::get('/admin',[UserDashboardController::class,'admin'])->name('admin');
-// Route::get('/user/admin/blogform',[UserDashboardController::class,'blogform'])->name('admin-blogform');
-// Route::get('/user/admin/form',[UserDashboardController::class,'form'])->name('admin-forms');
+Route::get('/donate',[UserDashboardController::class,'donate'])->name('donate');
+Route::get('/user/cause',[UserDashboardController::class,'cause'])->name('cause');
+Route::get('/register',[UserDashboardController::class,'register'])->name('register');
+Route::get('/login',[UserDashboardController::class,'login'])->name('login'); 
+Route::post('/user/login',[UserController::class,'signIn'])->name('login-post');
+Route::get('/contact',[UserDashboardController::class,'contact'])->name('contact');
 
 // admin
 Route::get('/form/formlist',[AdminDashboardController::class,'formlist'])->name('admin.formlist');
@@ -97,6 +60,9 @@ Route::get('/forms/post',[AdminDashboardController::class,'post'])->name('admin.
 Route::resource('cause', CauseController::class);
 Route::get('/cause/search',[CauseController::class,'search'])->name('cause-search');
 
+// event
+Route::resource('event',EventController::class );
+
 
 Route::get('/tables/userDashboard',[AdminDashboardController::class,'userDashboard'])->name('admin.userDasboard');
 Route::get('/To-Do/to-do',[AdminDashboardController::class,'to_do'])->name('admin.to-do');
@@ -105,8 +71,8 @@ Route::get('/To-Do/to-do-form',[AdminDashboardController::class,'to_doform'])->n
 
 Route::get('/form/event',[AdminDashboardController::class,'event'])->name('admin.event');
 
-Route::get('/event',[AdminDashboardController::class,'event'])->name('user.event');
-Route::get('/blog',[AdminDashboardController::class,'blog'])->name('user.blog');
+// Route::get('/event',[AdminDashboardController::class,'event'])->name('user.event');
+// Route::get('/blog',[AdminDashboardController::class,'blog'])->name('user.blog');
 
 Route::post('/event/store',[EventController::class,'store'])->name('admin.event.store');
 Route::get('/admin/login',[AdminDashboardController::class,'login'])->name('admin.login');
