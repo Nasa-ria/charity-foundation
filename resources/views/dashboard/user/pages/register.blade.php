@@ -5,12 +5,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                        <form class="tp-accountWrapper" method="POST" action="{{ route('register') }}">
+                        <form class="tp-accountWrapper" method="POST" action="{{ route('register.post') }}">
                             @csrf
                     <div class="tp-accountInfo">
                         <div class="tp-accountInfoHeader">
                             {{-- <a href="#"><img src="assets/images/logo.png" alt=""></a> --}}
-                            <a class="tp-accountBtn" href="{{route('user.login')}}">
+                            <a class="tp-accountBtn" href="{{route('login')}}">
                                 <span class="">Log in</span>
                             </a>
                         </div>
@@ -67,7 +67,7 @@
                             <!-- Add more social media login buttons as needed -->
 
                         </ul>
-                        <p class="subText"> Have an account?  <a href="{{route('user.login')}}">Login</a></p>
+                        <p class="subText"> Have an account?  <a href="{{route('login')}}">Login</a></p>
                     </div>
                 </form>
             </div>

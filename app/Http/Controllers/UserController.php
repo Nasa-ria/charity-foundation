@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Resources\UserCollection;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Password;
 use Laravel\Socialite\Facades\Socialite;
@@ -29,6 +30,10 @@ class UserController extends Controller
     
     public function signIn(UserRequest $request)
     {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ]);
         $credentials = $request->only('email', 'password');
         if (auth('web')->attempt($credentials)) {
             $user = auth('web')->user();
@@ -161,16 +166,6 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'Password changed successfully.');
     }
    
-    
-    
-    
-    
-    
-   
-    
-
-    
-
     public function logout(Request $request)
     {
         Auth::logout();
@@ -221,4 +216,43 @@ class UserController extends Controller
                     ? redirect()->route('login')->with('status', __($status))
                     : back()->withErrors(['email' => [__($status)]]);
     }
+
+    public function index(){
+        $users = User::latest()->paginate(10);
+        // $users =    new UserCollection($users);
+        // dd($users);
+        // return $users;
+        return view('dashboard.admin.pages.tables.userDashboard', compact('users'));
+        }
+    
+
+        public function update(UserRequest $request, string $id)
+        {
+          $user= User::findOrFail($id);       
+          $user->name = $request->input('name');
+          $user->email = $request->input('email');
+        //   $user->profile = $request->input('rised');
+      
+          $user->save();
+    
+        //   $image= $this->polymorphicClass->handleUpdatedImage($request,$id);
+        //   return redirect('/form/formlist')->with('success','Post Created Successfully');
+          return response()->json([
+              'data' => $user
+          ]);
+        }
+    
+        public function destroy(string $id)
+        {
+         $user = User::find($id);
+         $user->delete();
+         return back();
+        }
+
+        public function profile($id){
+
+            $user = User::find($id);
+          
+            return view('dashboard.admin.pages.tables.profile',compact('user'));
+        }
 }

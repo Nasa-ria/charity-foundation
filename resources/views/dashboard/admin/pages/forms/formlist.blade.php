@@ -38,14 +38,14 @@
                                 <td>3.</td>
                                 <td>Add Picture to Gallery</td>
                               
-                                <td><a class="theme-btn" href="{{route('admin.tag')}}">add</a></td>
+                                <td><a class="theme-btn" href="{{route('gallary.index')}}">view</a></td>
                             </tr>
-                            <tr>
+                            {{-- <tr>
                                 <td>4.</td>
                                 <td>Fix and squish bugs</td>
                              
                                 <td><a class="theme-btn" href="{{route('cause.index')}}">add</a></td>
-                            </tr>
+                            </tr> --}}
                         </tbody>
                     </table>
                 </div>

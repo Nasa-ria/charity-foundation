@@ -695,7 +695,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.userDasboard')}}" class="nav-link">
+                    <a href="{{route('userDasboard')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>User Dashboard</p>
                     </a>

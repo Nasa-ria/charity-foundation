@@ -2,8 +2,6 @@
 @extends('layouts.user.index')
 @section('content')
 
-
-
 <!-- end of header -->
 <!-- .tp-breadcumb-area start -->
 <div class="tp-breadcumb-area">
@@ -25,6 +23,7 @@
 <!-- tp-event-area start -->
 
 @if (Auth::check()) {
+    {{-- @dump(Auth::check()) --}}
 <div class="tp-donation-page-area section-padding">
     <div class="container">
         <div class="row">
@@ -133,7 +132,7 @@
 @else{
     <h4 class="text-center"> You need to sign in first</h4>
     <p class="text-center">click to sign up  <br>
-    <a  href="{{ route('user.register') }}">SignUp</a>
+    <a  href="{{ route('register') }}">SignUp</a>
 
     </p>
 }

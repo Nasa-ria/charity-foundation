@@ -7,6 +7,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,8 +49,9 @@ Route::get('/admin/form',[UserDashboardController::class,'form'])->name('admin-f
 Route::get('/donate',[UserDashboardController::class,'donate'])->name('donate');
 Route::get('/user/cause',[UserDashboardController::class,'cause'])->name('cause');
 Route::get('/register',[UserDashboardController::class,'register'])->name('register');
+Route::post('/user/register',[UserController::class,'register'])->name('register.post');
 Route::get('/login',[UserDashboardController::class,'login'])->name('login'); 
-Route::post('/user/login',[UserController::class,'signIn'])->name('login-post');
+Route::post('/user/login',[UserController::class,'signIn'])->name('login.post');
 Route::get('/contact',[UserDashboardController::class,'contact'])->name('contact');
 
 // admin
@@ -63,8 +65,14 @@ Route::get('/cause/search',[CauseController::class,'search'])->name('cause-searc
 // event
 Route::resource('event',EventController::class );
 
+Route::get('/forms/gallary',[GalleryController::class,'index'])->name('gallary.index');
+Route::get('/forms/gallary/create',[GalleryController::class,'create'])->name('gallary.create');
+Route::post('/forms/gallary/store',[GalleryController::class,'store'])->name('gallary.store');
 
-Route::get('/tables/userDashboard',[AdminDashboardController::class,'userDashboard'])->name('admin.userDasboard');
+Route::get('/tables/userDashboard',[UserController::class,'index'])->name('userDasboard');
+Route::get('/tables/profile/{id}',[UserController::class,'profile'])->name('profile');
+
+
 Route::get('/To-Do/to-do',[AdminDashboardController::class,'to_do'])->name('admin.to-do');
 Route::get('/To-Do/to-do-form',[AdminDashboardController::class,'to_doform'])->name('admin.to-do-form');
 
@@ -75,11 +83,11 @@ Route::get('/form/event',[AdminDashboardController::class,'event'])->name('admin
 // Route::get('/blog',[AdminDashboardController::class,'blog'])->name('user.blog');
 
 Route::post('/event/store',[EventController::class,'store'])->name('admin.event.store');
-Route::get('/admin/login',[AdminDashboardController::class,'login'])->name('admin.login');
-Route::post('/user/login',[UserController::class,'signIn'])->name('user.login');
-Route::post('/admin/register',[UserController::class,'register'])->name('admin.register');
-Route::get('/auth/google', [UserController::class,'redirectToGoogle'])->name('google.login');
-Route::get('/auth/google/callback', [UserController::class,'handleGoogleCallback']);
+// Route::get('/admin/login',[AdminDashboardController::class,'login'])->name('admin.login');
+// Route::post('/user/login',[UserController::class,'signIn'])->name('user.login');
+// Route::post('/admin/register',[UserController::class,'register'])->name('admin.register');
+// Route::get('/auth/google', [UserController::class,'redirectToGoogle'])->name('google.login');
+// Route::get('/auth/google/callback', [UserController::class,'handleGoogleCallback']);
 Route::get('/forgot-password',[UserController::class,'forget_password'])->middleware('guest')->name('password.request');
 Route::post('/forgot-password',[UserController::class,'forgetpassword'])->middleware('guest')->name('password.request.form');
 Route::get('/reset-password/{token}',[UserController::class,'password_reset'])->middleware('guest')->name('password.reset');
@@ -89,7 +97,7 @@ Route::get('/admin/event',[AdminDashboardController::class,'event'])->name('admi
 Route::get('/admin',[AdminDashboardController::class,'index'])->name('index');
 
 
-Route::get('/forms/post',[AdminDashboardController::class,'post'])->name('admin.tag');
+
 
 
 

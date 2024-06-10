@@ -37,7 +37,7 @@
                                 <li><a href="#"><i class="ti-calendar"></i> 20 sep 2018</a></li>
                                 <li><a href="#"><i class="ti-folder"></i> Education</a></li>
                             </ul>
-                            <h3><a href="{{route('user.singleEvent')}}">Education for All Children</a></h3>
+                            <h3><a href="{{route('singleEvent')}}">Education for All Children</a></h3>
                         </div>
                     </div>
                     <div class="grid">
@@ -49,7 +49,7 @@
                                 <li><a href="#"><i class="ti-calendar"></i> 20 sep 2018</a></li>
                                 <li><a href="#"><i class="ti-folder"></i> Food</a></li>
                             </ul>
-                            <h3><a href="{{route('user.singleEvent')}}">Food for All Everyone</a></h3>
+                            <h3><a href="{{route('singleEvent')}}">Food for All Everyone</a></h3>
                         </div>
                     </div>
                     <div class="grid">
@@ -61,7 +61,7 @@
                                 <li><a href="#"><i class="ti-calendar"></i> 20 sep 2018</a></li>
                                 <li><a href="#"><i class="ti-folder"></i> Treatment</a></li>
                             </ul>
-                            <h3><a href="{{route('user.singleEvent')}}">Free Treatment</a></h3>
+                            <h3><a href="{{route('singleEvent')}}">Free Treatment</a></h3>
                         </div>
                     </div>
                 </div>

@@ -35,7 +35,7 @@
                         <div class="cause-img">
                             <img src="{{asset('images/cas1.png')}}" alt="">
                             <div class="case-btn">
-                                <a href="{{route('user.donate')}}" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('user.singleCause')}}">Financial Help for Poor Families</a></h3>
+                        <h3><a href="{{route('singleCause')}}">Financial Help for Poor Families</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                         <div class="cause-img">
                             <img src="{{asset('images/cas2.jpg')}}" alt="">
                             <div class="case-btn">
-                                <a href="{{route('user.donate')}}" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('user.singleCause')}}">Education for Poor Children</a></h3>
+                        <h3><a href="{{route('singleCause')}}">Education for Poor Children</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         <div class="cause-img">
                             <img src="{{asset('images/cas3 (1).jpg')}}" alt="">
                             <div class="case-btn">
-                                <a href="{{route('user.donate')}}" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('user.singleCause')}}">Send Child to School for a Year</a></h3>
+                        <h3><a href="{{route('singleCause')}}">Send Child to School for a Year</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                         <div class="cause-img">
                             <img src="{{asset('images/cas4.jpg')}}"alt="">
                             <div class="case-btn">
-                                <a href="{{route('user.donate')}}"class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}"class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('user.singleCause')}}">Food And Home for Children</a></h3>
+                        <h3><a href="{{route('singleCause')}}">Food And Home for Children</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                         <div class="cause-img">
                             <img src="{{asset('images/cas5.jpg')}}" alt="">
                             <div class="case-btn">
-                                <a href="{{route('user.donate')}}" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('user.singleCause')}}">Pure Water For The World</a></h3>
+                        <h3><a href="{{route('singleCause')}}">Pure Water For The World</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                         <div class="cause-img">
                             <img src="{{asset('images/cas6.jpg')}}"alt="">
                             <div class="case-btn">
-                                <a href="{{route('user.donate')}}" class="theme-btn">Donate Now</a>
+                                <a href="{{route('donate')}}" class="theme-btn">Donate Now</a>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                             <li><a href="#">GOAL : $9860</a></li>
                             <li><a href="#">RISED : $768</a></li>
                         </ul>
-                        <h3><a href="{{route('user.singleCause')}}">Recycling For Charity</a></h3>
+                        <h3><a href="{{route('singleCause')}}">Recycling For Charity</a></h3>
                         <p>It is a long established fact that a reader will be distracted.</p>
                     </div>
                 </div>

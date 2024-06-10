@@ -3,9 +3,6 @@
 @extends('layouts.admin.index')
 @section('content')
 
-{{-- @php
-use Illuminate\Pagination\Paginator;
-@endphp --}}
 <div class="content-wrapper">
     <section class="content">
 
@@ -36,10 +33,7 @@ use Illuminate\Pagination\Paginator;
         <div>
           
         </div>
-        @if(count($causes)>0)
-           
-
-                @foreach ($causes as $cause) 
+       
             <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
            
@@ -54,13 +48,46 @@ use Illuminate\Pagination\Paginator;
                                    <th>Action</th>
                             </tr>
                         </thead>
+
+                        <tbody>
+                            @if(count($causes)>0)
+           
+
+                            @foreach ($causes as $cause) 
+                                
+                           
+                            <tr>
+                                     <td>john doe</td>
+                                <td>{{$cause->created_at->format('d.m.Y')}}</td>
+                                <td><span class="tag tag-success">{{$cause->status}}</span></td>
+                           
+                                <td>{{$cause->title}}</td>
+                
+                                <td class=" d-flex flex-row gap-2"><span >
+                                    <form action={{route('cause.destroy',$cause->id)}} method="POST"> 
+                                    @csrf
+                                    @method('delete')
+                                    <button class="badge bg-danger" style="text-decoration: none ; border: none;">Delete</button>
+                                    </form>
+                                </span>
+                               <span class="badge bg-warning"><a href={{route('cause.show',$cause->id)}}></a>Edit</span>
+                               <span class="badge bg-primary"> <a href={{route('cause.edit',$cause->id)}}></a>Read</span>
+                            </td>
+                            
+                            </tr>
+                            @endforeach
+                          
+                            
+                        </tbody>
                         <tr>
+                           
                             {{-- <td>183</td> --}}
                             {{-- get  login user --}}
-                            <td>John Doe</td>
+                            {{-- <td>John Doe</td>
                             <td>{{$cause->created_at->format('d.m.Y')}}</td>
                             <td><span class="tag tag-success">{{$cause->status}}</span></td>
                             <td>{{$cause->title}}</td>
+
                             <td>
                                 <div class="d-flex flex-row ">
                                     <button class="btn btn-navbar"><small> <a href={{route('cause.show',$cause->id)}}><i class="fas fa-eye"></i></a>  </small></button>
@@ -74,6 +101,7 @@ use Illuminate\Pagination\Paginator;
                                 </span>
                                 <div>
                             </td>
+                            @endforeach --}}
                         </tr>
                      
 
@@ -84,7 +112,7 @@ use Illuminate\Pagination\Paginator;
                 </table>
             </div>
         
-        @endforeach
+      
         {{-- {{ $causes->links() }} --}}
     @else
         <p>no data inputed yet</p>
@@ -103,7 +131,7 @@ use Illuminate\Pagination\Paginator;
 
     </div>
 </div>
-<div class="d-flex justify-content-center"> 
+<div class="d-flex justify-content-center mt-5"> 
 <a href="{{ $causes->previousPageUrl() }}" aria-label="Previous" class="btn btn-primary btn-sm mr-2{{ $causes->onFirstPage() ? ' disabled' : '' }}">
     Previous
 </a>

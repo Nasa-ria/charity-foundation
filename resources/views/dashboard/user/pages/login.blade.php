@@ -6,8 +6,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            {{-- <form  class="signin-form" method="POST" action="{{ route('signup') }}" > --}}
-                            <form class="signin-form" method="POST" action="{{ route('login-post') }}">
+                            <form  class="tp-accountWrapper" method="POST" action="{{ route('login.post') }}" >
+                            {{-- <form class="signin-form" method="POST" action="{{ route('login.post') }}"> --}}
                                 @csrf
                                 <div class="tp-accountInfo">
                                     <div class="tp-accountInfoHeader">
@@ -71,7 +71,7 @@
 
                                     </ul>
                                     <p class="subText">Don't have an account? <li><a
-                                                href="{{ route('user.register') }}">Create free
+                                                href="{{ route('register') }}">Create free
                                                 account</a></p>
                                 </div>
                             </form>

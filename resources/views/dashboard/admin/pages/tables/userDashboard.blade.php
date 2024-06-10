@@ -11,7 +11,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Simple Tables</li>
+                            <li class="breadcrumb-item active">Users</li>
                         </ol>
                     </div>
                 </div>
@@ -37,59 +37,39 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($users as $user)
+                                            
+                                       
                                         <tr>
-                                            <td>1.</td>
-                                            <td>Update software</td>
-                                            {{-- <td>
-                                                <div class="progress progress-xs">
-                                                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                                                </div>
-                                            </td> --}}
-                                            {{-- <div class="d-flex flex-row"> --}}
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>   {{ $user->name }}</td>
+                            {{-- if user is a volunter or worker this should be avaliable --}}
                                             <td><span class="badge bg-danger">delete</span>
-                                           <span class="badge bg-warning">Edit</span>
+                                           <span class="badge bg-warning"><a  href={{route('profile',$user->id)}}>profile</a></span>
                                            <span class="badge bg-primary">Read</span></td>
                                             {{-- <div> --}}
                                         </tr>
-                                        <tr>
-                                            <td>2.</td>
-                                            <td>Clean database</td>
-                                            {{-- <td>
-                                                <div class="progress progress-xs">
-                                                    <div class="progress-bar bg-warning" style="width: 70%"></div>
-                                                </div>
-                                            </td> --}}
-                                            <td><span class="badge bg-danger">delete</span>
-                                                <span class="badge bg-warning">Edit</span>
-                                                <span class="badge bg-primary">Read</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3.</td>
-                                            <td>Cron job running</td>
-                                            {{-- <td>
-                                                <div class="progress progress-xs progress-striped active">
-                                                    <div class="progress-bar bg-primary" style="width: 30%"></div>
-                                                </div>
-                                            </td> --}}
-                                            <td><span class="badge bg-danger">delete</span>
-                                                <span class="badge bg-warning">Edit</span>
-                                                <span class="badge bg-primary">Read</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4.</td>
-                                            <td>Fix and squish bugs</td>
-                                            {{-- <td>
-                                                <div class="progress progress-xs progress-striped active">
-                                                    <div class="progress-bar bg-success" style="width: 90%"></div>
-                                                </div>
-                                            </td> --}}
-                                            <td><span class="badge bg-danger">delete</span>
-                                                <span class="badge bg-warning">Edit</span>
-                                                <span class="badge bg-primary">Read</span></td>
-                                        </tr>
+                                        @endforeach
+                                      
+                                        
                                     </tbody>
                                 </table>
                             </div>
+                        </div>
+
+                           <div class="d-flex justify-content-center mt-5"> 
+<a href="{{ $users->previousPageUrl() }}" aria-label="Previous" class="btn btn-primary btn-sm mr-2{{ $users->onFirstPage() ? ' disabled' : '' }}">
+    Previous
+</a>
+
+<span>Page {{ $users->currentPage() }} of {{ $users->lastPage() }}</span>
+
+<a href="{{ $users->nextPageUrl() }}" aria-label="Next" class="btn btn-primary ml-2{{ $users->hasMorePages() ? '' : ' disabled' }}">
+    Next
+</a>
+
+    </section>
+</div>
                         </div>
         
 
