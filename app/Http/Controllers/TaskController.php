@@ -3,24 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 
 class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Task::all();
-        return view('tasks.index', compact('tasks'));
+        // $tasks = Task::all(); 
+        return view('dashboard.admin.pages.tasks.task');;
     }
 
     public function create()
     {
-        return view('tasks.create');
-    }
+        $users = User::all()->filter(function($user){
+            return in_array($user->role, ['employee', 'volunteer']);
+        });
+        return view('dashboard.admin.pages.Tasks.create',compact('users'));
+    }    
 
     public function store(Request $request)
     {
+        Log::debug($request->all());
         // Validate the form data for task creation
         $validatedData = $request->validate([
             'title' => 'required|max:255',
@@ -37,8 +43,8 @@ class TaskController extends Controller
         $task->save();
     
         // Attach workers to the task (assuming you have worker IDs from the form)
-        $workerIds = $request->input('assigned_workers', []); // Assuming the input field name is 'assigned_workers'
-        $task->workers()->attach($workerIds);
+        $assigneeIds = $request->input('assigned_workers', []); // Assuming the input field name is 'assigned_workers'
+        $task->assignees()->attach($assigneeIds);
     
         return redirect('/tasks')->with('success', 'Task created successfully');
     }

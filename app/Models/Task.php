@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Assignee;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Task extends Model
 {
@@ -14,8 +15,8 @@ class Task extends Model
         'completed', // Add 'completed' here
     ];
 
-    public function workers()
+    public function assignees()
 {
-    return $this->belongsToMany(Worker::class);
+    return $this->belongsToMany(Assignee::class);
 }
 }

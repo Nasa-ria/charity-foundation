@@ -51,14 +51,14 @@ class CauseController extends Controller
     public function store(CauseRequest $request)
     {
         try{  
-          
+            // dd($request->all());
             $cause = Cause::create($request->validated());
            $image= $this->polymorphicClass->handleUploadedImage($request);
          $tags= $this->polymorphicClass->handleTags($request);
-        //  return response()->json([
-        //     'data' => $cause ,$image,$tags
-        // ]);
-           return redirect('/cause')->with('success','Post Created Successfully');
+         return response()->json([
+            'data' => $cause ,$image,$tags
+        ]);
+        //    return redirect('/cause')->with('success','Post Created Successfully');
                
         } catch (\Exception $e) {
             // Log and return error response

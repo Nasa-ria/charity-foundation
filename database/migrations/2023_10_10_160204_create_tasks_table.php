@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table-> string('title');
-           $table->string('description');
-           $table->boolean('completed')->default(false);
+           $table->string('task');
+           $table->string('status')->default('created');
+           $table->unsignedBigInteger('user_id');
+           $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }

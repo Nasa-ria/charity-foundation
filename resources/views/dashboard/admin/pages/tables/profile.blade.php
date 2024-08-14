@@ -3,7 +3,7 @@
     <div class="content-wrapper">
         <section class="content">
 
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card mt-5">
@@ -20,8 +20,9 @@
                                             
                                 
                                         <h3>{{ $user->name }}</h3>
-                                        <p>name>
-                                        <p>Email: {{ $user->email }}</p>
+                                        <p> {{ $user->email }}</p>
+                                        <p> {{ $user->position }}</p>
+                                        
                                         <!-- Add more user details here -->
                                       
                                     </div>

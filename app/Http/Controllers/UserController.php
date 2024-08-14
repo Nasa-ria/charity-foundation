@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use Exception;
 use App\Models\User;
 use App\Models\Image;
+use App\Classes\Queries;
+use App\Models\Volunteer;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Http\Requests\UserRequest;
 use App\Services\polymorphicClass;
 use Laravel\Passport\HasApiTokens;
@@ -14,7 +17,9 @@ use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Resources\UserCollection;
+use App\Http\Requests\VolunteerRequest;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Password;
 use Laravel\Socialite\Facades\Socialite;
@@ -30,39 +35,63 @@ class UserController extends Controller
     
     public function signIn(UserRequest $request)
     {
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required',
-        ]);
-        $credentials = $request->only('email', 'password');
-        if (auth('web')->attempt($credentials)) {
-            $user = auth('web')->user();
-
-            $token = $user->createToken("User")->accessToken;
-
-            // return response()->json([
-            //     'data' => $user->refresh(),
+        try {
+            $credentials = $request->only('email', 'password');
+            if (!Auth::guard('web')->attempt($credentials)) {
+                return Response::response(false, 'Incorrect email or password.');
+            }
+            $user = Auth::guard('web')->user();
+            $token = $user->createToken('tokens')->plainTextToken;
+            // $response = [
+            //     'user' => $user,
             //     'token' => $token,
-            // ]);
-            return redirect()->route('home')->with('success', 'User Login successfully');
-        } else {
-            return "fail";
+            // ];
+
+            if($user->role == 'user'){
+                return redirect('/');
+            }else{
+                return redirect('admin');
+            }
+            
+            // return Response::response(true, $response);
+        } catch (Exception $ex) {
+            Log::debug($ex->getMessage());
+            return Response::response(false, 'Incorrect email or password.');
         }
-      
     }
 
     public function register(UserRequest $request)
     {
         
-    try{
-        $data = $request->validated();
-        $data['password'] = Hash::make($data['password']);
-        $user = User::create($data);
-            // return response()->json([
-            //     'message' => 'User registered successfully',
-            //     'user' => $user,
-            // ], 201);
-            return redirect()->route('home')->with('success', 'User registered successfully');
+        try{
+            $data = $request->validated();
+            $data['password'] = Hash::make($data['password']);
+            $user = User::create($data);
+            return response()->json([
+                'message' => 'User registered successfully',
+                'user' => $user,
+            ], 201);
+            // return redirect()->route('home')->with('success', 'User registered successfully');
+        } catch (\Exception $e) {
+            // Log the exception for debugging purposes
+            Log::error('User registration failed: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'User registration failed. Please try again later.');
+        }
+    }
+
+    public function StoreUser(UserRequest $request)
+    {
+        
+        try {
+            $data = $request->validated();
+            $data['password'] = Hash::make('change_me_now');
+            $user = User::create($data);
+            $user->assignRole('employee');
+            Mail::to($user->email)->send(new SendPassword($user));
+            return response()->json([
+                'message' => 'User registered successfully',
+                'user' => $user,
+            ], 201);
         } catch (\Exception $e) {
             // Log the exception for debugging purposes
             Log::error('User registration failed: ' . $e->getMessage());
@@ -71,10 +100,10 @@ class UserController extends Controller
             // return response()->json([
             //     'error' => 'User registration failed. Please try again later.',
             // ], 500);
-            return redirect()->back()->with('error', 'User registration failed. Please try again later.');
+            // return redirect()->back()->with('error', 'User registration failed. Please try again later.');
         }
     }
-
+   
 
     public function loginWithgoogle()
     {
@@ -254,5 +283,22 @@ class UserController extends Controller
             $user = User::find($id);
           
             return view('dashboard.admin.pages.tables.profile',compact('user'));
+        }
+
+        public function FormVolunteer(VolunteerRequest $request)
+        {
+            dd($request->all());
+            try {
+                $validatedData = $request->validated();
+                $volunteer = Volunteer::create($validatedData);
+
+                return response()->json([
+                    'message' => 'Volunteer registered successfully',
+                    'volunteer' => $volunteer,
+                ], 201);
+            } catch (\Exception $e) {
+                Log::error('Volunteer registration failed: ' . $e->getMessage());
+                return response()->json(['error' => 'Volunteer registration failed'], 500);
+            }
         }
 }

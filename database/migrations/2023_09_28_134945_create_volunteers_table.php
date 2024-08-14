@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('fullName');
             $table->string('email');
             $table->string('subject');
-            $table->string('gender');
+            $table->string('case-descirption');
             $table->string('resume');
             $table->timestamps();
         });

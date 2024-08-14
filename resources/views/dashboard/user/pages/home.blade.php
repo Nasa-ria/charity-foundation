@@ -368,7 +368,7 @@
                                     <img src="{{asset('images/pexels-photo-6347743.webp')}}" alt>
                                 </div>
                                 <div class="details">
-                                    <h3><a href="volunteer.html">Devin Robertson</a></h3>
+                                    <h3><a href={{route('volunteer')}}>Devin Robertson</a></h3>
                                     <p>CEO & Founder</p>
                                 </div>
                             </div>
@@ -377,7 +377,7 @@
                                     <img src="{{asset('images/pexels-photo-6347743.webp')}}" alt>
                                 </div>
                                 <div class="details">
-                                    <h3><a href="volunteer.html">Rickey Goodman</a></h3>
+                                    <h3><a href={{route('volunteer')}}>Rickey Goodman</a></h3>
                                     <p>Volunteer</p>
                                 </div>
                             </div>
@@ -386,7 +386,7 @@
                                     <img src="{{asset('images/pexels-photo-6347743.webp')}}" alt>
                                 </div>
                                 <div class="details">
-                                    <h3><a href="volunteer.html">Jean Washington</a></h3>
+                                    <h3><a href={{route('volunteer')}}>Jean Washington</a></h3>
                                     <p>Volunteer</p>
                                 </div>
                             </div>

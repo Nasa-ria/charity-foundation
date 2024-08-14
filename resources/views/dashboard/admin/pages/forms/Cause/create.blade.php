@@ -11,7 +11,7 @@
                             {{-- <h6>Department of Nutrition, Food and Exercise Sciences</h6> --}}
                         </div>
                         <div class="panel-body">
-                            <form id="myForm" method="POST" action="{{ route('cause.store') }}"
+                            <form id="myForm" method="POST" action="{{route('cause.store') }}"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <p class="mb-3" style="color:#FF0000"> *Please complete all areas:</p>
@@ -60,7 +60,7 @@
                                 </div>
 
 
-                                <hr />
+                                {{-- <hr /> --}}
                                 <input type="hidden" id="formStatus" name="status" value="{{ 'Published' }}">
 
                                 <div class="text-center mt-5">
@@ -71,7 +71,6 @@
 
 
 
-                                {{-- </form> --}}
 
 
 
@@ -81,8 +80,6 @@
 
 
                         </div>
-
-                        {{-- </div> --}}
                     </div>
 
 

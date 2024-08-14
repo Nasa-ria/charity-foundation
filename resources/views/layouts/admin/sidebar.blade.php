@@ -676,20 +676,20 @@
                         <p>Form</p>
                     </a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a href="{{route('UI-general')}}" class="nav-link">
+                <li class="nav-item">
+                    <a href="{{route('home')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Chat</p>
+                        <p>Transactions </p>
                     </a>
-                </li> --}}
-                {{-- <li class="nav-item">
-                    <a href="{{route('UI-general')}}" class="nav-link">
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('home')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Chart</p>
                     </a>
-                </li> --}}
+                </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.to-do')}}" class="nav-link">
+                    <a href="{{route('task.index')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>To-Do</p>
                     </a>
