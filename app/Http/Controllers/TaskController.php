@@ -12,7 +12,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        // $tasks = Task::all(); 
+        $tasks = Task::all(); 
         return view('dashboard.admin.pages.tasks.task');;
     }
 
