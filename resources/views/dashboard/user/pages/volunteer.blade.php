@@ -70,52 +70,53 @@
                                             <i class="ti-reload"></i>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="clearfix error-handling-messages">
-                                    <div id="success">Thank you</div>
-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- volunteer-area-end -->
-<!-- start team-section -->
-<section class="team-section v2 section-padding ">
-    <div class="container">
-        <div class="row">
-            <div class="col col-lg-6 col-lg-offset-3">
-                <div class="section-title text-center">
-                    <span>Meet Our Team</span>
-                    <h2>Our Expert Volunteer</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col col-xs-12">
-                <div class="team-grids clearfix">
-                    <div class="grid">
-                        <div class="img-holder">
-                            <img src="assets/images/team/team-1.jpg" alt>
-                        </div>
-                        <div class="details">
-                            <h3><a href="volunteer.html">Devin Robertson</a></h3>
-                            <p>CEO & Founder</p>
-                        </div>
-                    </div>
-                    <div class="grid">
-                        <div class="img-holder">
-                            <img src="assets/images/team/team-2.jpg" alt>
-                        </div>
-                        <div class="details">
-                            <h3><a href="volunteer.html">Rickey Goodman</a></h3>
-                            <p>Volunteer</p>
-                        </div>
-                    </div>
+-                                {{-- <div class="clearfix error-handling-messages">
+-                                    <div id="success">Thank you</div>
+-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
+-                                </div> --}}
+-
+-
+                             </form>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!-- volunteer-area-end -->
+ <!-- start team-section -->
+ <section class="team-section v2 section-padding ">
+     <div class="container">
+         <div class="row">
+             <div class="col col-lg-6 col-lg-offset-3">
+                 <div class="section-title text-center">
+                     <span>Meet Our Team</span>
+                     <h2>Our Expert Volunteer</h2>
+                 </div>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col col-xs-12">
+                 <div class="team-grids clearfix">
+                     <div class="grid">
+                         <div class="img-holder">
+                             <img src="assets/images/team/team-1.jpg" alt>
+                         </div>
+                         <div class="details">
+                             <h3><a href="volunteer.html">Devin Robertson</a></h3>
+                             <p>CEO & Founder</p>
+                         </div>
+                     </div>
+                     <div class="grid">
+                         <div class="img-holder">
+                             <img src="assets/images/team/team-2.jpg" alt>
+                         </div>
+                         <div class="details">
+                             <h3><a href="volunteer.html">Rickey Goodman</a></h3>
+                             <p>Volunteer</p>
+                         </div>
+                     </div>
                     <div class="grid">
                         <div class="img-holder">
                             <img src="assets/images/team/team-3.jpg" alt>
